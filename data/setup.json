@@ -1,0 +1,235 @@
+{
+  "currentSetup": {
+    "month": 6,
+    "year": 2026,
+    "housingType": "Phòng trọ",
+    "presence": "Đi làm ban ngày",
+    "peopleCount": 1,
+    "roomSize": "15-25",
+    "roomHeat": "normal",
+    "cookingFrequency": "sometimes",
+    "monthlyDays": 30,
+    "lastKwh": 190,
+    "lastBillCost": 836000,
+    "billStayRatio": "full",
+    "rate": 4000,
+    "devices": [
+      {
+        "id": "ac",
+        "name": "Điều hòa",
+        "hours": 4,
+        "quantity": 3
+      },
+      {
+        "id": "fridge",
+        "name": "Tủ lạnh",
+        "hours": 24,
+        "quantity": 3
+      },
+      {
+        "id": "fan",
+        "name": "Quạt điện",
+        "hours": 8,
+        "quantity": 2
+      },
+      {
+        "id": "laptop",
+        "name": "Máy tính/Laptop",
+        "hours": 4,
+        "quantity": 2
+      },
+      {
+        "id": "light",
+        "name": "Đèn",
+        "hours": 6,
+        "quantity": 3
+      },
+      {
+        "id": "washer",
+        "name": "Máy giặt",
+        "hours": 4.25,
+        "quantity": 1
+      },
+      {
+        "id": "dryer",
+        "name": "Máy sấy",
+        "hours": 0,
+        "quantity": 0
+      },
+      {
+        "id": "stove",
+        "name": "Bếp điện",
+        "hours": 0,
+        "quantity": 0
+      },
+      {
+        "id": "microwave",
+        "name": "Lò vi sóng",
+        "hours": 0,
+        "quantity": 0
+      }
+    ]
+  },
+  "history": [
+    {
+      "key": "2026-06",
+      "month": 6,
+      "year": 2026,
+      "savedAt": "2026-05-09T15:27:42.084Z",
+      "setup": {
+        "month": 6,
+        "year": 2026,
+        "housingType": "Phòng trọ",
+        "presence": "Đi làm ban ngày",
+        "peopleCount": 1,
+        "roomSize": "15-25",
+        "roomHeat": "normal",
+        "cookingFrequency": "sometimes",
+        "monthlyDays": 30,
+        "lastKwh": 190,
+        "lastBillCost": 836000,
+        "billStayRatio": "full",
+        "rate": 4000,
+        "devices": [
+          {
+            "id": "ac",
+            "name": "Điều hòa",
+            "hours": 4,
+            "quantity": 3
+          },
+          {
+            "id": "fridge",
+            "name": "Tủ lạnh",
+            "hours": 24,
+            "quantity": 3
+          },
+          {
+            "id": "fan",
+            "name": "Quạt điện",
+            "hours": 8,
+            "quantity": 2
+          },
+          {
+            "id": "laptop",
+            "name": "Máy tính/Laptop",
+            "hours": 4,
+            "quantity": 2
+          },
+          {
+            "id": "light",
+            "name": "Đèn",
+            "hours": 6,
+            "quantity": 3
+          },
+          {
+            "id": "washer",
+            "name": "Máy giặt",
+            "hours": 4.25,
+            "quantity": 1
+          },
+          {
+            "id": "dryer",
+            "name": "Máy sấy",
+            "hours": 0,
+            "quantity": 0
+          },
+          {
+            "id": "stove",
+            "name": "Bếp điện",
+            "hours": 0,
+            "quantity": 0
+          },
+          {
+            "id": "microwave",
+            "name": "Lò vi sóng",
+            "hours": 0,
+            "quantity": 0
+          }
+        ]
+      },
+      "actualCost": 0,
+      "actualKwh": 0,
+      "actualUpdatedAt": ""
+    },
+    {
+      "key": "2026-05",
+      "month": 5,
+      "year": 2026,
+      "savedAt": "2026-05-09T15:27:42.084Z",
+      "setup": {
+        "month": 5,
+        "year": 2026,
+        "housingType": "Phòng trọ",
+        "presence": "Đi làm ban ngày",
+        "peopleCount": 1,
+        "roomSize": "15-25",
+        "roomHeat": "normal",
+        "cookingFrequency": "sometimes",
+        "monthlyDays": 30,
+        "lastKwh": 0,
+        "lastBillCost": 0,
+        "billStayRatio": "full",
+        "rate": 4000,
+        "devices": [
+          {
+            "id": "ac",
+            "name": "Điều hòa",
+            "hours": 4,
+            "quantity": 1
+          },
+          {
+            "id": "fridge",
+            "name": "Tủ lạnh",
+            "hours": 24,
+            "quantity": 1
+          },
+          {
+            "id": "fan",
+            "name": "Quạt điện",
+            "hours": 8,
+            "quantity": 1
+          },
+          {
+            "id": "laptop",
+            "name": "Máy tính/Laptop",
+            "hours": 4,
+            "quantity": 1
+          },
+          {
+            "id": "light",
+            "name": "Đèn",
+            "hours": 5,
+            "quantity": 3
+          },
+          {
+            "id": "washer",
+            "name": "Máy giặt",
+            "hours": 0.25,
+            "quantity": 1
+          },
+          {
+            "id": "dryer",
+            "name": "Máy sấy",
+            "hours": 0,
+            "quantity": 0
+          },
+          {
+            "id": "stove",
+            "name": "Bếp điện",
+            "hours": 0,
+            "quantity": 0
+          },
+          {
+            "id": "microwave",
+            "name": "Lò vi sóng",
+            "hours": 0,
+            "quantity": 0
+          }
+        ]
+      },
+      "actualCost": 0,
+      "actualKwh": 0,
+      "actualUpdatedAt": ""
+    }
+  ]
+}

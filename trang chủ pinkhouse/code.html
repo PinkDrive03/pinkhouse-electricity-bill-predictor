@@ -1,0 +1,262 @@
+﻿<!DOCTYPE html>
+
+<html class="light" lang="vi"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>PINKHOUSE - Dá»± ?oÃ¡n tiá»n ?i?n dá»… dÃ ng</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-secondary": "#ffffff",
+                        "inverse-on-surface": "#ecf1ff",
+                        "on-tertiary-container": "#fffdff",
+                        "on-primary-fixed": "#3f001c",
+                        "on-primary-fixed-variant": "#8e0048",
+                        "on-error-container": "#93000a",
+                        "on-tertiary": "#ffffff",
+                        "surface-container": "#e7eeff",
+                        "on-primary": "#ffffff",
+                        "on-surface-variant": "#594047",
+                        "outline-variant": "#e1bec6",
+                        "on-secondary-fixed": "#2c1325",
+                        "tertiary-fixed-dim": "#ffb1c3",
+                        "tertiary-fixed": "#ffd9e0",
+                        "on-secondary-fixed-variant": "#5c3d51",
+                        "tertiary-container": "#cd4070",
+                        "error-container": "#ffdad6",
+                        "primary": "#b7005e",
+                        "secondary-container": "#fdd0ea",
+                        "on-secondary-container": "#79576c",
+                        "on-tertiary-fixed-variant": "#8e0542",
+                        "primary-fixed-dim": "#ffb1c7",
+                        "primary-fixed": "#ffd9e2",
+                        "secondary": "#765469",
+                        "surface-tint": "#ba0060",
+                        "surface-container-highest": "#d8e3fb",
+                        "surface-container-high": "#dee8ff",
+                        "surface": "#f9f9ff",
+                        "primary-container": "#db2777",
+                        "error": "#ba1a1a",
+                        "surface-variant": "#d8e3fb",
+                        "on-surface": "#111c2d",
+                        "on-tertiary-fixed": "#3f0019",
+                        "inverse-surface": "#263143",
+                        "surface-bright": "#f9f9ff",
+                        "inverse-primary": "#ffb1c7",
+                        "on-primary-container": "#fffdff",
+                        "on-background": "#111c2d",
+                        "tertiary": "#ac2558",
+                        "on-error": "#ffffff",
+                        "outline": "#8d6f77",
+                        "secondary-fixed": "#ffd8ed",
+                        "background": "#f9f9ff",
+                        "surface-container-low": "#f0f3ff",
+                        "surface-dim": "#cfdaf2",
+                        "secondary-fixed-dim": "#e5bad3",
+                        "surface-container-lowest": "#ffffff"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "lg": "40px",
+                        "gutter": "16px",
+                        "base": "8px",
+                        "sm": "12px",
+                        "md": "24px",
+                        "xs": "4px",
+                        "margin": "24px",
+                        "xl": "64px"
+                    },
+                    "fontFamily": {
+                        "label-md": ["Plus Jakarta Sans"],
+                        "label-lg": ["Plus Jakarta Sans"],
+                        "headline-lg": ["Plus Jakarta Sans"],
+                        "label-sm": ["Plus Jakarta Sans"],
+                        "body-md": ["Plus Jakarta Sans"],
+                        "body-lg": ["Plus Jakarta Sans"],
+                        "headline-sm": ["Plus Jakarta Sans"],
+                        "headline-md": ["Plus Jakarta Sans"],
+                        "body-sm": ["Plus Jakarta Sans"]
+                    },
+                    "fontSize": {
+                        "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "600" }],
+                        "label-lg": ["14px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "600" }],
+                        "headline-lg": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "label-sm": ["11px", { "lineHeight": "14px", "letterSpacing": "0.03em", "fontWeight": "500" }],
+                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                        "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
+                        "headline-sm": ["20px", { "lineHeight": "28px", "fontWeight": "600" }],
+                        "headline-md": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+                        "body-sm": ["14px", { "lineHeight": "20px", "fontWeight": "400" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        body { font-family: 'Plus Jakarta Sans', sans-serif; }
+    </style>
+</head>
+<body class="bg-background text-on-background antialiased min-h-screen flex flex-col">
+<!-- TopNavBar -->
+<header class="bg-surface dark:bg-surface-dim full-width top-0 sticky z-50 shadow-sm border-b border-surface-container-low">
+<div class="flex justify-between items-center px-margin h-16 w-full max-w-7xl mx-auto">
+<!-- Brand -->
+<div class="text-headline-md font-headline-md font-bold text-primary flex items-center gap-base">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">home_pin</span>
+                PINKHOUSE
+            </div>
+<!-- Navigation Links (Desktop) -->
+<nav class="hidden md:flex gap-lg">
+<a class="text-on-surface-variant font-medium hover:text-primary transition-colors cursor-pointer active:opacity-80 font-label-lg text-label-lg" href="#">CÃ´ng cá»¥ d? ?oÃ¡n</a>
+<a class="text-on-surface-variant font-medium hover:text-primary transition-colors cursor-pointer active:opacity-80 font-label-lg text-label-lg" href="#">Báº£ng ?iá»u khiá»ƒn</a>
+<a class="text-on-surface-variant font-medium hover:text-primary transition-colors cursor-pointer active:opacity-80 font-label-lg text-label-lg" href="#">Máº¹o tiáº¿t kiá»‡m</a>
+<a class="text-on-surface-variant font-medium hover:text-primary transition-colors cursor-pointer active:opacity-80 font-label-lg text-label-lg" href="#">Lá»‹ch sá»­</a>
+</nav>
+<!-- Trailing Actions -->
+<div class="flex items-center gap-sm">
+<button class="p-base rounded-full hover:bg-surface-container-highest transition-colors text-on-surface-variant">
+<span class="material-symbols-outlined">notifications</span>
+</button>
+<button class="p-base rounded-full hover:bg-surface-container-highest transition-colors text-on-surface-variant">
+<span class="material-symbols-outlined">settings</span>
+</button>
+<div class="w-8 h-8 rounded-full bg-surface-variant overflow-hidden ml-sm border border-outline-variant">
+<img alt="User profile" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBhdzeXz30OqZzBxEdIB1TVGw_2xcU0KCMVnZAIboiZX1NgeXPVMmlwVw_2SFb1Sa7veR5vcgmuqqd-u1hEi-Ept7pRtD7QRVv9AZJbpapDHSukpA12NJ1I3ajXJtmSlG4F7fzAowYdm8bbFMMN0LitRLLPfnf_-p-08kMpk1v5zcfAwC0r3eM8_hnvcKTZxyBF60Oz221HtVyl_T14Dhpbr26u1yyF4KUA-9Wqn_MvK9v0yQs31K7jhTNsQXI1vE2NBeA7jN71Y9c"/>
+</div>
+</div>
+</div>
+</header>
+<!-- Main Content Canvas -->
+<main class="flex-grow flex flex-col">
+<!-- Hero Section -->
+<section class="w-full bg-surface-container-lowest relative overflow-hidden">
+<!-- Decorative background blob -->
+<div class="absolute top-0 right-0 w-[800px] h-[800px] bg-secondary-container/30 rounded-full blur-3xl -translate-y-1/2 translate-x-1/3 pointer-events-none"></div>
+<div class="max-w-7xl mx-auto px-margin py-xl lg:py-[120px] flex flex-col lg:flex-row items-center gap-xl relative z-10">
+<!-- Text Content -->
+<div class="w-full lg:w-1/2 flex flex-col gap-md items-start">
+<div class="inline-flex items-center gap-xs bg-surface-container-low px-sm py-xs rounded-full border border-surface-variant">
+<span class="material-symbols-outlined text-primary text-[16px]" style="font-variation-settings: 'FILL' 1;">electric_bolt</span>
+<span class="text-label-md font-label-md text-on-surface-variant">Tiá»‡n Ã­ch minh báº¡ch cho má»i nhÃ </span>
+</div>
+<h1 class="text-[48px] leading-[56px] font-bold text-on-surface tracking-tight">
+                        Dá»± ?oÃ¡n tiá»n ?i?n <br/>
+<span class="text-primary">dá»… dÃ ng</span> cÃ¹ng PINKHOUSE
+                    </h1>
+<p class="text-body-lg font-body-lg text-on-surface-variant max-w-[500px]">
+                        Giáº£i phÃ¡p hoÃ n háº£o giÃºp ngÆ°á»i thuÃª nhÃ  kiá»ƒm soÃ¡t chi phÃ­ nÄƒng lÆ°á»£ng. Nháº­p thÃ´ng tin thiáº¿t bá»‹, d? ?oÃ¡n hÃ³a Ä‘Æ¡n thÃ¡ngi? t?i vÃ  nháº­n cÃ¡c máº¹o tá»‘i Æ°u chi tiÃªu Ä‘á»ƒ khÃ´ng bao giá» bá»‹ báº¥t ngá» bá»Ÿi hÃ³a Ä‘Æ¡n tiá»n ?i?n.
+                    </p>
+<div class="flex items-center gap-md pt-base">
+<button class="bg-primary text-on-primary px-lg py-[14px] rounded-lg font-label-lg text-label-lg font-bold hover:opacity-90 transition-opacity shadow-[0_4px_14px_rgba(183,0,94,0.2)] flex items-center gap-sm">
+                            Báº¯t Ä‘áº§u ngay
+                            <span class="material-symbols-outlined">arrow_forward</span>
+</button>
+<button class="px-lg py-[14px] rounded-lg font-label-lg text-label-lg font-bold text-primary border border-primary hover:bg-surface-container-low transition-colors">
+                            TÃ¬m hiá»ƒu thÃªm
+                        </button>
+</div>
+</div>
+<!-- Hero Image/Graphic -->
+<div class="w-full lg:w-1/2 relative">
+<div class="relative w-full aspect-square max-w-[600px] mx-auto rounded-2xl overflow-hidden shadow-[0_20px_40px_rgba(183,0,94,0.08)] border border-surface-container-high bg-surface">
+<img alt="Hero Graphic" class="w-full h-full object-cover" data-alt="A bright, modern illustration or 3D render of a cozy apartment interior bathed in soft morning light. The scene includes subtle pink accents on furniture or decor, aligning with a light-mode, soft-corporate aesthetic. In the foreground, a sleek digital tablet displays a clean, minimalist energy usage chart with a vibrant pink trend line, demonstrating utility management. The mood is calm, organized, and reassuring, conveying a sense of easy financial control for renters." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBmSsjNSqV4YT0LVRFvWlPrSer55AVYR5CQo5cA8lsGkBfb1Nm99Q7svc7AqgYrjzojg8he5NZl6_E26T_rR3ihZSqKsCoCB5cJFOjA-L2PrgOljWsY9KuzB8DklHqZtCUy1NcEGnqnrsC8WC0U-F_lYdWmKp5sZYd_c5EUYoWbXGEmW3rSdfTrsHEcrzQsvC1fqmHGSrYsficuHYXuITviiDrsB33YrA9H4omY_I6ju-7H0vVjpPX7XhrFoQTjeAq43twAgFgYZzs"/>
+<!-- Floating UI Element -->
+<div class="absolute bottom-lg left-[-20px] bg-surface p-sm rounded-xl border border-surface-variant shadow-[0_8px_20px_rgba(0,0,0,0.05)] flex items-center gap-sm">
+<div class="w-10 h-10 rounded-full bg-secondary-container flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">trending_down</span>
+</div>
+<div>
+<p class="text-label-sm font-label-sm text-on-surface-variant">Dá»± kiáº¿n tiáº¿t kiá»‡m</p>
+<p class="text-headline-sm font-headline-sm text-on-surface font-bold">150.000?</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Features Section (Bento Grid Style) -->
+<section class="w-full bg-surface py-xl border-t border-surface-container-high">
+<div class="max-w-7xl mx-auto px-margin flex flex-col gap-lg">
+<div class="text-center max-w-2xl mx-auto flex flex-col gap-sm">
+<h2 class="text-headline-lg font-headline-lg text-on-surface">Má»i tÃ­nh nÄƒng báº¡n cáº§n</h2>
+<p class="text-body-md font-body-md text-on-surface-variant">PINKHOUSE cung cáº¥p cÃ¡c cÃ´ng cá»¥ tr?c quan Ä‘á»ƒ báº¡n hiá»ƒu rÃµ vÃ  kiá»ƒm soÃ¡t lÆ°á»£ng ?i?n nÄƒng tiÃªu thá»¥ trong nhÃ .</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-md mt-md">
+<!-- Feature 1 -->
+<div class="bg-surface-container-lowest border border-outline-variant rounded-xl p-md flex flex-col gap-md hover:shadow-[0_8px_30px_rgba(183,0,94,0.06)] transition-all duration-300 relative overflow-hidden group">
+<div class="absolute top-0 right-0 w-32 h-32 bg-secondary-container/20 rounded-bl-full -z-10 group-hover:scale-110 transition-transform"></div>
+<div class="w-12 h-12 rounded-lg bg-secondary-container flex items-center justify-center text-primary">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">calculate</span>
+</div>
+<h3 class="text-headline-sm font-headline-sm text-on-surface">TÃ­nh toÃ¡n chÃ­nh xÃ¡c</h3>
+<p class="text-body-md font-body-md text-on-surface-variant flex-grow">
+                            Nháº­p cÃ´ng suáº¥t vÃ  thá»i gian s? dá»¥ng cá»§a tá»«ng thiáº¿t bá»‹. Há»‡ thá»‘ng sáº½ Æ°á»›c tÃ­nh má»©c tiÃªu thá»¥ ?i?n nÄƒng v?i Ä‘á»™ chÃ­nh xÃ¡c cao d?a trÃªn giÃ¡ ?i?n hiá»‡n hÃ nh.
+                        </p>
+</div>
+<!-- Feature 2 -->
+<div class="bg-surface-container-lowest border border-outline-variant rounded-xl p-md flex flex-col gap-md hover:shadow-[0_8px_30px_rgba(183,0,94,0.06)] transition-all duration-300 relative overflow-hidden group">
+<div class="absolute top-0 right-0 w-32 h-32 bg-primary-container/10 rounded-bl-full -z-10 group-hover:scale-110 transition-transform"></div>
+<div class="w-12 h-12 rounded-lg bg-surface-container-high flex items-center justify-center text-primary">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">tips_and_updates</span>
+</div>
+<h3 class="text-headline-sm font-headline-sm text-on-surface">Máº¹o tiáº¿t kiá»‡m ?i?n</h3>
+<p class="text-body-md font-body-md text-on-surface-variant flex-grow">
+                            Nháº­n cÃ¡c Ä‘á» xuáº¥t Ä‘Æ°á»£c cÃ¡ nhÃ¢n hÃ³a Ä‘á»ƒ cáº¯t giáº£m lÃ£ng phÃ­ nÄƒng lÆ°á»£ng. Nhá»¯ng thay Ä‘á»•i nhá» trong thÃ³i quen cÃ³ thá»ƒ mang láº¡i hiá»‡u quáº£ l?o?i?n cho hÃ³a Ä‘Æ¡n cá»§a báº¡n.
+                        </p>
+</div>
+<!-- Feature 3 -->
+<div class="bg-surface-container-lowest border border-outline-variant rounded-xl p-md flex flex-col gap-md hover:shadow-[0_8px_30px_rgba(183,0,94,0.06)] transition-all duration-300 relative overflow-hidden group">
+<div class="absolute top-0 right-0 w-32 h-32 bg-tertiary-container/10 rounded-bl-full -z-10 group-hover:scale-110 transition-transform"></div>
+<div class="w-12 h-12 rounded-lg bg-surface-container-low flex items-center justify-center text-primary border border-outline-variant">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">history</span>
+</div>
+<h3 class="text-headline-sm font-headline-sm text-on-surface">Theo dÃµi lá»‹l?ch s?</h3>
+<p class="text-body-md font-body-md text-on-surface-variant flex-grow">
+                            LÆ°u trá»¯ vÃ  so sÃ¡nh cÃ¡c d? ?oÃ¡n qua tá»«ng thÃ¡ng. Biá»ƒu Ä‘á»“ tr?c quan giÃºp báº¡n nháº­n ra xu hÆ°á»›ng s? dá»¥ng vÃ  ?iá»u chá»‰nh ká»‹p thá»i trÆ°á»›c khi nháº­n hÃ³a Ä‘Æ¡n.
+                        </p>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container-highest mt-auto">
+<div class="flex flex-col md:flex-row justify-between items-center py-md px-margin w-full max-w-7xl mx-auto">
+<div class="text-label-lg font-label-lg font-bold text-primary mb-sm md:mb-0 flex items-center gap-xs">
+<span class="material-symbols-outlined text-[18px]">home_pin</span>
+                PINKHOUSE
+            </div>
+<div class="text-label-sm font-label-sm text-on-surface-variant mb-sm md:mb-0">
+                © 2026 PINKHOUSE
+            </div>
+<div class="flex gap-md">
+<a class="text-on-surface-variant text-label-sm font-label-sm hover:text-primary transition-colors" href="#">Äiá»u khoáº£n dá»‹ch vá»¥</a>
+<a class="text-on-surface-variant text-label-sm font-label-sm hover:text-primary transition-colors" href="#">ChÃ­nh sÃ¡ch báº£o máº­t</a>
+<a class="text-on-surface-variant text-label-sm font-label-sm hover:text-primary transition-colors" href="#">LiÃªn há»‡ há»— trá»£</a>
+</div>
+</div>
+</footer>
+  <script src="../_auth.js"></script>  <script src="../_nav.js"></script>  <script src="../_ui_exact_vi.js?v=20260506g"></script></body></html>
+
+
+
+
+
+
+
+
+

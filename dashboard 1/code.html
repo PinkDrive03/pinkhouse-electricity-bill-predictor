@@ -1,0 +1,431 @@
+﻿<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>PINKHOUSE Dashboard</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "on-secondary": "#ffffff",
+                        "inverse-on-surface": "#ecf1ff",
+                        "on-tertiary-container": "#fffdff",
+                        "on-primary-fixed": "#3f001c",
+                        "on-primary-fixed-variant": "#8e0048",
+                        "on-error-container": "#93000a",
+                        "on-tertiary": "#ffffff",
+                        "surface-container": "#e7eeff",
+                        "on-primary": "#ffffff",
+                        "on-surface-variant": "#594047",
+                        "outline-variant": "#e1bec6",
+                        "on-secondary-fixed": "#2c1325",
+                        "tertiary-fixed-dim": "#ffb1c3",
+                        "tertiary-fixed": "#ffd9e0",
+                        "on-secondary-fixed-variant": "#5c3d51",
+                        "tertiary-container": "#cd4070",
+                        "error-container": "#ffdad6",
+                        "primary": "#b7005e",
+                        "secondary-container": "#fdd0ea",
+                        "on-secondary-container": "#79576c",
+                        "on-tertiary-fixed-variant": "#8e0542",
+                        "primary-fixed-dim": "#ffb1c7",
+                        "primary-fixed": "#ffd9e2",
+                        "secondary": "#765469",
+                        "surface-tint": "#ba0060",
+                        "surface-container-highest": "#d8e3fb",
+                        "surface-container-high": "#dee8ff",
+                        "surface": "#f9f9ff",
+                        "primary-container": "#db2777",
+                        "error": "#ba1a1a",
+                        "surface-variant": "#d8e3fb",
+                        "on-surface": "#111c2d",
+                        "on-tertiary-fixed": "#3f0019",
+                        "inverse-surface": "#263143",
+                        "surface-bright": "#f9f9ff",
+                        "inverse-primary": "#ffb1c7",
+                        "on-primary-container": "#fffdff",
+                        "on-background": "#111c2d",
+                        "tertiary": "#ac2558",
+                        "on-error": "#ffffff",
+                        "outline": "#8d6f77",
+                        "secondary-fixed": "#ffd8ed",
+                        "background": "#f9f9ff",
+                        "surface-container-low": "#f0f3ff",
+                        "surface-dim": "#cfdaf2",
+                        "secondary-fixed-dim": "#e5bad3",
+                        "surface-container-lowest": "#ffffff"
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    spacing: {
+                        "lg": "40px",
+                        "gutter": "16px",
+                        "base": "8px",
+                        "sm": "12px",
+                        "md": "24px",
+                        "xs": "4px",
+                        "margin": "24px",
+                        "xl": "64px"
+                    },
+                    fontFamily: {
+                        "label-md": ["Plus Jakarta Sans"],
+                        "label-lg": ["Plus Jakarta Sans"],
+                        "headline-lg": ["Plus Jakarta Sans"],
+                        "label-sm": ["Plus Jakarta Sans"],
+                        "body-md": ["Plus Jakarta Sans"],
+                        "body-lg": ["Plus Jakarta Sans"],
+                        "headline-sm": ["Plus Jakarta Sans"],
+                        "headline-md": ["Plus Jakarta Sans"],
+                        "body-sm": ["Plus Jakarta Sans"]
+                    },
+                    fontSize: {
+                        "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "600" }],
+                        "label-lg": ["14px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "600" }],
+                        "headline-lg": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "label-sm": ["11px", { "lineHeight": "14px", "letterSpacing": "0.03em", "fontWeight": "500" }],
+                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                        "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
+                        "headline-sm": ["20px", { "lineHeight": "28px", "fontWeight": "600" }],
+                        "headline-md": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+                        "body-sm": ["14px", { "lineHeight": "20px", "fontWeight": "400" }]
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-surface text-on-surface font-body-md min-h-screen flex flex-col">
+<!-- TopNavBar -->
+<nav class="bg-surface docked full-width top-0 sticky z-50 bg-surface-container-low border-b border-outline-variant flat no shadows">
+<div class="flex justify-between items-center px-margin h-16 w-full max-w-7xl mx-auto">
+<div class="flex items-center gap-md">
+<span class="text-headline-md font-headline-md font-bold text-primary">PINKHOUSE</span>
+<div class="hidden md:flex gap-sm">
+<a class="text-on-surface-variant font-medium hover:text-primary transition-colors cursor-pointer active:opacity-80 px-sm py-xs font-plus-jakarta-sans text-label-lg" href="#">CÃƒÂ´ng cÃ¡Â»Â¥ d? ?oÃƒÂ¡n</a>
+<a class="text-primary font-bold border-b-2 border-primary pb-1 hover:text-primary transition-colors cursor-pointer active:opacity-80 px-sm py-xs font-plus-jakarta-sans text-label-lg" href="#">BÃ¡ÂºÂ£ng ?iÃ¡Â»Âu khiÃ¡Â»Æ’n</a>
+<a class="text-on-surface-variant font-medium hover:text-primary transition-colors cursor-pointer active:opacity-80 px-sm py-xs font-plus-jakarta-sans text-label-lg" href="#">MÃ¡ÂºÂ¹o tiÃ¡ÂºÂ¿t kiÃ¡Â»â€¡m</a>
+<a class="text-on-surface-variant font-medium hover:text-primary transition-colors cursor-pointer active:opacity-80 px-sm py-xs font-plus-jakarta-sans text-label-lg" href="#">LÃ¡Â»â€¹ch sÃ¡Â»Â­</a>
+</div>
+</div>
+<div class="flex items-center gap-sm">
+<button class="p-xs text-on-surface-variant hover:text-primary transition-colors cursor-pointer">
+<span class="material-symbols-outlined" data-icon="notifications">notifications</span>
+</button>
+<button class="p-xs text-on-surface-variant hover:text-primary transition-colors cursor-pointer">
+<span class="material-symbols-outlined" data-icon="settings">settings</span>
+</button>
+<img alt="User profile" class="w-8 h-8 rounded-full object-cover ml-sm border border-outline-variant" data-alt="A close-up, high-quality profile portrait of a confident young professional woman. The lighting is soft and studio-quality, casting a gentle glow that complements the clean, modern aesthetic of the UI. She has a subtle, welcoming smile. The background is a minimalist, slightly out-of-focus pastel tone, aligning perfectly with the Rosy Clarity design system's light mode and soft-corporate vibe." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDkn04xkjTKAz3MxG_YeodkJus2mPI4KYpxS-afzB4RHiLgJ2J6FujvwElNom3aa3XOYGhAI51RylcYP-F9GeUde8cf0RZW94Y08uHXRXacmiKSOA2Iab3U6YYAAIaVVyk5kiQa0WBptPzkTGdxU5AkKmIIU9E_t_yfS9WH7hamhwDNpk5I5IwfXp8hFT1zovaKWPj8d1O0LaGtkjykZ-b_-LFrS0YqCfy6q3TM4PMNOh31HS-PYeF16jqDs7eTIymm0gAxG9M3B1w"/>
+</div>
+</div>
+</nav>
+<div class="flex flex-1 w-full max-w-7xl mx-auto">
+<!-- SideNavBar -->
+<aside class="bg-surface-container-low hidden lg:flex flex-col p-base gap-xs docked h-screen w-64 left-0 border-r border-outline-variant flat no shadows shrink-0">
+<div class="p-sm flex items-center gap-sm mb-md">
+<div class="w-10 h-10 rounded-lg bg-primary-container flex items-center justify-center text-on-primary-container">
+<span class="material-symbols-outlined" data-icon="home">home</span>
+</div>
+<div>
+<h2 class="text-headline-sm font-headline-sm text-primary">Trung tÃƒÂ¢m DÃ¡Â»Â± ?oÃƒÂ¡n</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">QuÃ¡ÂºÂ£n lÃƒÂ½ ?i?n nÃ„Æ’ng</p>
+</div>
+</div>
+<button class="w-full bg-primary text-on-primary font-label-lg text-label-lg py-sm px-md rounded-lg mb-md flex items-center justify-center gap-xs shadow-[0_2px_0_0_rgba(183,0,94,0.1)] hover:bg-surface-tint transition-colors"><span class="material-symbols-outlined text-[20px]" data-icon="add">add</span> DÃ¡Â»Â± ?oÃƒÂ¡D? ?o?n m?i</button>
+<nav class="flex flex-col gap-xs flex-1 font-plus-jakarta-sans text-body-md">
+<a class="flex items-center gap-sm px-md py-sm bg-secondary-container text-on-secondary-container font-bold rounded-lg duration-200 ease-in-out hover:bg-surface-container-highest transition-all" href="#"><span class="material-symbols-outlined" data-icon="dashboard">dashboard</span> TÃ¡Â»â€¢ng quan</a>
+<a class="flex items-center gap-sm px-md py-sm text-on-surface-variant hover:bg-surface-container-high rounded-lg duration-200 ease-in-out hover:bg-surface-container-highest transition-all" href="#"><span class="material-symbols-outlined" data-icon="bolt">bolt</span> NhÃ¡ÂºÂ­p dÃ¡Â»Â¯ liÃ¡Â»â€¡u s? dÃ¡Â»Â¥ng</a>
+<a class="flex items-center gap-sm px-md py-sm text-on-surface-variant hover:bg-surface-container-high rounded-lg duration-200 ease-in-out hover:bg-surface-container-highest transition-all" href="#"><span class="material-symbols-outlined" data-icon="payments">payments</span> DÃ¡Â»Â± ?oÃƒÂ¡n chi phÃƒÂ­</a>
+<a class="flex items-center gap-sm px-md py-sm text-on-surface-variant hover:bg-surface-container-high rounded-lg duration-200 ease-in-out hover:bg-surface-container-highest transition-all" href="#"><span class="material-symbols-outlined" data-icon="lightbulb">lightbulb</span> MÃ¡ÂºÂ¹o nÃ„Æ’ng lÃ†Â°Ã¡Â»Â£ng</a>
+<a class="flex items-center gap-sm px-md py-sm text-on-surface-variant hover:bg-surface-container-high rounded-lg duration-200 ease-in-out hover:bg-surface-container-highest transition-all" href="#"><span class="material-symbols-outlined" data-icon="home">home</span> NhÃƒÂ  cÃ¡Â»Â§a tÃƒÂ´i</a>
+</nav>
+<div class="flex flex-col gap-xs mt-auto pt-md border-t border-outline-variant font-plus-jakarta-sans text-body-md">
+<a class="flex items-center gap-sm px-md py-sm text-on-surface-variant hover:bg-surface-container-high rounded-lg duration-200 ease-in-out" href="#"><span class="material-symbols-outlined" data-icon="help">help</span> HÃ¡Â»â€” trÃ¡Â»Â£</a>
+<a class="flex items-center gap-sm px-md py-sm text-on-surface-variant hover:bg-surface-container-high rounded-lg duration-200 ease-in-out" href="#"><span class="material-symbols-outlined" data-icon="logout">logout</span> Ã„ÂÃ„Æ’ng xuÃ¡ÂºÂ¥t</a>
+</div>
+</aside>
+<!-- Main Content -->
+<main class="flex-1 p-md lg:p-lg flex flex-col gap-lg overflow-y-auto">
+<header class="flex flex-col gap-xs">
+<h1 class="font-headline-lg text-headline-lg text-on-surface">BÃ¡ÂºÂ£ng ?iÃ¡Â»Âu khiÃ¡Â»Æ’n Ã„ÂiÃ¡Â»â€¡n nÃ„Æ’ng</h1>
+<p class="font-body-md text-body-md text-on-surface-variant">TÃ¡Â»â€¢ng quan vÃ¡Â»Â mÃ¡Â»Â©c tiÃƒÂªu thÃ¡Â»Â¥ vÃƒÂ  chi phÃƒÂ­ d? kiÃ¡ÂºÂ¿n cho kÃ¡Â»Â³ thanh toÃƒÂ¡n hiÃ¡Â»â€¡n tÃ¡ÂºÂ¡i.</p>
+</header>
+<!-- Bento Grid -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-md">
+<!-- Total Cost Card -->
+<div class="col-span-1 md:col-span-6 lg:col-span-4 bg-surface-container-lowest border border-surface-container-high rounded-xl p-md flex flex-col justify-between relative overflow-hidden">
+<div class="absolute top-0 right-0 p-sm opacity-10 text-primary">
+<span class="material-symbols-outlined text-[100px]" data-icon="payments">payments</span>
+</div>
+<div>
+<h3 class="font-label-lg text-label-lg text-on-surface-variant flex items-center gap-xs"><span class="material-symbols-outlined text-[18px]" data-icon="monitoring">monitoring</span> Chi phÃƒÂ­ hÃƒÂ ng thÃƒÂ¡ng d? kiÃ¡ÂºÂ¿n</h3>
+<div class="mt-sm">
+<span class="font-headline-lg text-headline-lg text-primary block" id="totalCost">1,850,000 ÃƒÂ¢'Ã‚Â«</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant bg-surface-container-low px-xs py-[2px] rounded inline-flex items-center gap-[2px] mt-xs"><span class="material-symbols-outlined text-[14px] text-tertiary">arrow_upward</span> <span id="deltaPercent">+4.2%</span> so v?i thÃƒÂ¡ng trÃ†Â°Ã¡Â»â€ºc</span>
+</div>
+</div>
+<div class="mt-lg pt-sm border-t border-surface-container-high flex justify-between items-center">
+<span class="font-body-sm text-body-sm text-on-surface-variant" id="totalKwhLabel">Ã†Â¯Ã¡Â»â€ºc tÃƒÂ­nh d?a trÃƒÂªn 420 kWh</span>
+<a class="font-label-md text-label-md text-primary hover:underline" href="#">Xem chi tiÃ¡ÂºÂ¿t</a>
+</div>
+</div>
+<!-- Device Breakdown Chart (Simulated) -->
+<div class="col-span-1 md:col-span-6 lg:col-span-8 bg-surface-container-lowest border border-surface-container-high rounded-xl p-md flex flex-col">
+<div class="flex justify-between items-center mb-md">
+<h3 class="font-label-lg text-label-lg text-on-surface-variant">TiÃƒÂªu thÃ¡Â»Â¥ theo thiÃ¡ÂºÂ¿t bÃ¡Â»â€¹</h3>
+<button class="font-label-sm text-label-sm text-on-surface-variant flex items-center gap-xs hover:text-primary transition-colors">ThÃƒÂ¡ng nÃƒÂ y <span class="material-symbols-outlined text-[16px]" data-icon="expand_more">expand_more</span></button>
+</div>
+<div class="flex-1 flex flex-col justify-center gap-sm" id="breakdownList">
+<!-- Bar Item 1 -->
+<div class="flex items-center gap-sm">
+<div class="w-32 font-body-sm text-body-sm text-on-surface truncate">MÃƒÂ¡y ?iÃ¡Â»Âu hÃƒÂ²a</div>
+<div class="flex-1 h-2 bg-surface-container rounded-full overflow-hidden">
+<div class="h-full bg-primary rounded-full" style="width: 45%;"></div>
+</div>
+<div class="w-12 text-right font-label-md text-label-md text-on-surface">45%</div>
+</div>
+<!-- Bar Item 2 -->
+<div class="flex items-center gap-sm">
+<div class="w-32 font-body-sm text-body-sm text-on-surface truncate">MÃƒÂ¡y ?iÃ¡Â»Âu hÃƒÂ²a</div>
+<div class="flex-1 h-2 bg-surface-container rounded-full overflow-hidden">
+<div class="h-full bg-tertiary-fixed-dim rounded-full" style="width: 25%;"></div>
+</div>
+<div class="w-12 text-right font-label-md text-label-md text-on-surface">25%</div>
+</div>
+<!-- Bar Item 3 -->
+<div class="flex items-center gap-sm">
+<div class="w-32 font-body-sm text-body-sm text-on-surface truncate">MÃƒÂ¡y ?iÃ¡Â»Âu hÃƒÂ²a</div>
+<div class="flex-1 h-2 bg-surface-container rounded-full overflow-hidden">
+<div class="h-full bg-outline rounded-full" style="width: 15%;"></div>
+</div>
+<div class="w-12 text-right font-label-md text-label-md text-on-surface">15%</div>
+</div>
+<!-- Bar Item 4 -->
+<div class="flex items-center gap-sm">
+<div class="w-32 font-body-sm text-body-sm text-on-surface truncate">MÃƒÂ¡y ?iÃ¡Â»Âu hÃƒÂ²a</div>
+<div class="flex-1 h-2 bg-surface-container rounded-full overflow-hidden">
+<div class="h-full bg-surface-container-highest rounded-full" style="width: 15%;"></div>
+</div>
+<div class="w-12 text-right font-label-md text-label-md text-on-surface">15%</div>
+</div>
+</div>
+</div>
+<!-- Savings Tips Section ('MÃ¡ÂºÂ¹o tiÃ¡ÂºÂ¿t kiÃ¡Â»â€¡m ?i?n') -->
+<div class="col-span-1 md:col-span-12 bg-surface-container-low rounded-xl p-md border border-outline-variant flex flex-col md:flex-row gap-md items-start">
+<div class="w-12 h-12 rounded-full bg-secondary-container text-on-secondary-container flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined" data-icon="lightbulb" data-weight="fill">lightbulb</span>
+</div>
+<div class="flex-1">
+<h3 class="font-headline-sm text-headline-sm text-on-surface mb-xs">MÃ¡ÂºÂ¹o tiÃ¡ÂºÂ¿t kiÃ¡Â»â€¡m ?i?n</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-sm">DÃ¡Â»Â±a trÃƒÂªn dÃ¡Â»Â¯ liÃ¡Â»â€¡u cÃ¡Â»Â§a bÃ¡ÂºÂ¡n, Ã„â€˜ÃƒÂ¢y lÃƒÂ  cÃƒÂ¡c chiÃ¡ÂºÂ¿n lÃ†Â°Ã¡Â»Â£c cÃƒÂ¡ nhÃƒÂ¢n hÃƒÂ³a Ã„â€˜Ã¡Â»Æ’ giÃ¡ÂºÂ£m hÃƒÂ³a Ã„â€˜Ã†Â¡n cÃ¡Â»Â§a bÃ¡ÂºÂ¡n.</p>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-sm" id="tipsList">
+<div class="bg-surface-container-lowest p-sm rounded-lg border border-surface-container-high flex gap-sm items-start">
+<span class="material-symbols-outlined text-tertiary mt-[2px]" data-icon="ac_unit">ac_unit</span>
+<div>
+<h4 class="font-label-md text-label-md text-on-surface">Optimize AC Temp</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-xs">DÃ¡Â»Â±a trÃƒÂªn dÃ¡Â»Â¯ liÃ¡Â»â€¡u cÃ¡Â»Â§a bÃ¡ÂºÂ¡n, Ã„â€˜ÃƒÂ¢y lÃƒÂ  cÃƒÂ¡c chiÃ¡ÂºÂ¿n lÃ†Â°Ã¡Â»Â£c cÃƒÂ¡ nhÃƒÂ¢n hÃƒÂ³a Ã„â€˜Ã¡Â»Æ’ giÃ¡ÂºÂ£m hÃƒÂ³a Ã„â€˜Ã†Â¡n cÃ¡Â»Â§a bÃ¡ÂºÂ¡n.</p>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-sm rounded-lg border border-surface-container-high flex gap-sm items-start">
+<span class="material-symbols-outlined text-tertiary mt-[2px]" data-icon="kitchen">kitchen</span>
+<div>
+<h4 class="font-label-md text-label-md text-on-surface">Fridge Maintenance</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-xs">DÃ¡Â»Â±a trÃƒÂªn dÃ¡Â»Â¯ liÃ¡Â»â€¡u cÃ¡Â»Â§a bÃ¡ÂºÂ¡n, Ã„â€˜ÃƒÂ¢y lÃƒÂ  cÃƒÂ¡c chiÃ¡ÂºÂ¿n lÃ†Â°Ã¡Â»Â£c cÃƒÂ¡ nhÃƒÂ¢n hÃƒÂ³a Ã„â€˜Ã¡Â»Æ’ giÃ¡ÂºÂ£m hÃƒÂ³a Ã„â€˜Ã†Â¡n cÃ¡Â»Â§a bÃ¡ÂºÂ¡n.</p>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-sm rounded-lg border border-surface-container-high flex gap-sm items-start">
+<span class="material-symbols-outlined text-tertiary mt-[2px]" data-icon="power_off">power_off</span>
+<div>
+<h4 class="font-label-md text-label-md text-on-surface">Unplug Idle Devices</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-xs">DÃ¡Â»Â±a trÃƒÂªn dÃ¡Â»Â¯ liÃ¡Â»â€¡u cÃ¡Â»Â§a bÃ¡ÂºÂ¡n, Ã„â€˜ÃƒÂ¢y lÃƒÂ  cÃƒÂ¡c chiÃ¡ÂºÂ¿n lÃ†Â°Ã¡Â»Â£c cÃƒÂ¡ nhÃƒÂ¢n hÃƒÂ³a Ã„â€˜Ã¡Â»Æ’ giÃ¡ÂºÂ£m hÃƒÂ³a Ã„â€˜Ã†Â¡n cÃ¡Â»Â§a bÃ¡ÂºÂ¡n.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+</div>
+<!-- Footer -->
+<footer class="bg-surface-container-highest flex flex-col md:flex-row justify-between items-center py-md px-margin w-full flat no shadows">
+<span class="font-plus-jakarta-sans text-label-sm text-on-surface-variant">© 2026 PINKHOUSE</span>
+<div class="flex gap-md mt-sm md:mt-0">
+<a class="font-plus-jakarta-sans text-label-sm text-on-surface-variant hover:text-primary transition-colors" href="#">Ã„ÂiÃ¡Â»Âu khoÃ¡ÂºÂ£n dÃ¡Â»â€¹ch vÃ¡Â»Â¥</a>
+<a class="font-plus-jakarta-sans text-label-sm text-on-surface-variant hover:text-primary transition-colors" href="#">ChÃƒÂ­nh sÃƒÂ¡ch bÃ¡ÂºÂ£o mÃ¡ÂºÂ­t</a>
+<a class="font-plus-jakarta-sans text-label-sm text-on-surface-variant hover:text-primary transition-colors" href="#">LiÃƒÂªn hÃ¡Â»â€¡ hÃ¡Â»â€” trÃ¡Â»Â£</a>
+</div>
+</footer>
+<script>
+  (function () {
+    const totalCost = document.getElementById("totalCost");
+    const deltaPercent = document.getElementById("deltaPercent");
+    const totalKwhLabel = document.getElementById("totalKwhLabel");
+    const breakdownList = document.getElementById("breakdownList");
+    const tipsList = document.getElementById("tipsList");
+
+    function currencyVnd(value) {
+      return new Intl.NumberFormat("vi-VN").format(value) + "Ä‘";
+    }
+
+    function renderBreakdown(items) {
+      breakdownList.innerHTML = (items || []).map((item, idx) => {
+        const colorClass = ["bg-primary", "bg-tertiary-fixed-dim", "bg-outline", "bg-surface-container-highest"][idx % 4];
+        return `
+        <div class="flex items-center gap-sm">
+          <div class="w-32 font-body-sm text-body-sm text-on-surface truncate">${item.name}</div>
+          <div class="flex-1 h-2 bg-surface-container rounded-full overflow-hidden">
+            <div class="h-full ${colorClass} rounded-full" style="width: ${item.percent}%;"></div>
+          </div>
+          <div class="w-12 text-right font-label-md text-label-md text-on-surface">${item.percent}%</div>
+        </div>`;
+      }).join("");
+    }
+
+    function renderTips(tips) {
+      tipsList.innerHTML = (tips || []).map((tip) => `
+        <div class="bg-surface-container-lowest p-sm rounded-lg border border-surface-container-high flex gap-sm items-start">
+          <span class="material-symbols-outlined text-tertiary mt-[2px]">lightbulb</span>
+          <div>
+            <h4 class="font-label-md text-label-md text-on-surface">${tip.title}</h4>
+            <p class="font-body-sm text-body-sm text-on-surface-variant mt-xs">${tip.description}</p>
+          </div>
+        </div>
+      `).join("");
+    }
+
+    function fallbackFromLocalSetup() {
+      try {
+        const raw = localStorage.getItem("pinkhouseSetupDraft");
+        if (!raw) return null;
+        const setup = JSON.parse(raw);
+
+        const watts = {
+          ac: 1100,
+          fridge: 150,
+          fan: 70,
+          laptop: 65,
+          light: 15,
+          washer: 500,
+          dryer: 1800,
+          stove: 2000,
+          microwave: 1200
+        };
+        const devices = Array.isArray(setup.devices) ? setup.devices : [];
+        const rate = Number(setup.rate || 4000);
+
+        const perDevice = devices.map((device) => {
+          const watt = watts[device.id] || 100;
+          const quantity = Math.max(0, Number(device.quantity != null ? device.quantity : 1) || 0);
+          const monthlyKwh = (watt * Number(device.hours || 0) * quantity * 30) / 1000;
+          return { name: device.name || device.id || "Thiáº¿t bá»‹", monthlyKwh };
+        }).filter((device) => device.monthlyKwh > 0);
+
+        const totalKwh = perDevice.reduce((sum, device) => sum + device.monthlyKwh, 0);
+        const totalCostValue = Math.round(totalKwh * rate);
+        const breakdown = perDevice
+          .map((device) => ({
+            name: device.name,
+            percent: totalKwh ? Math.round((device.monthlyKwh / totalKwh) * 100) : 0
+          }))
+          .sort((a, b) => b.percent - a.percent);
+
+        return {
+          totalCost: totalCostValue,
+          totalKwh: Math.round(totalKwh),
+          deltaPercent: 0,
+          breakdown,
+          tips: [
+            { title: "Giáº£m nhiá»‡t Ä‘á»™ Ä‘iá»u hÃ²a há»£p lÃ½", description: "Äáº·t Ä‘iá»u hÃ²a 26-27Â°C Ä‘á»ƒ giáº£m hao Ä‘iá»‡n." },
+            { title: "Táº¯t thiáº¿t bá»‹ chá»", description: "RÃºt nguá»“n khi khÃ´ng sá»­ dá»¥ng Ä‘á»ƒ tiáº¿t kiá»‡m." },
+            { title: "Tá»‘i Æ°u thá»i gian dÃ¹ng", description: "Giáº£m sá»‘ giá» thiáº¿t bá»‹ cÃ´ng suáº¥t lá»›n trong ngÃ y." }
+          ]
+        };
+      } catch (error) {
+        return null;
+      }
+    }
+
+    async function loadDashboard() {
+      try {
+        const res = await fetch("http://localhost:3000/api/dashboard");
+        const data = await res.json();
+        totalCost.textContent = currencyVnd(data.totalCost || 0);
+        deltaPercent.textContent = `+${data.deltaPercent || 0}%`;
+        totalKwhLabel.textContent = `Æ¯á»›c tÃ­nh dá»±a trÃªn ${data.totalKwh || 0} kWh`;
+        renderBreakdown(data.breakdown || []);
+        renderTips(data.tips || []);
+      } catch (error) {
+        console.error(error);
+        const localData = fallbackFromLocalSetup();
+        if (localData) {
+          totalCost.textContent = currencyVnd(localData.totalCost || 0);
+          deltaPercent.textContent = `+${localData.deltaPercent || 0}%`;
+          totalKwhLabel.textContent = `Æ¯á»›c tÃ­nh dá»±a trÃªn ${localData.totalKwh || 0} kWh`;
+          renderBreakdown(localData.breakdown || []);
+          renderTips(localData.tips || []);
+        }
+      }
+    }
+
+    loadDashboard();
+  })();
+</script>
+<script>
+  (function () {
+    function formatVnd(text) {
+      const digits = (String(text || "").match(/\d+/g) || []).join("");
+      const value = digits ? Number(digits) : 0;
+      return new Intl.NumberFormat("vi-VN").format(value) + "Ä‘";
+    }
+
+    function fixDashboardCopy() {
+      const headings = document.querySelectorAll("main h3");
+      if (headings[0]) headings[0].textContent = "Chi phÃ­ hÃ ng thÃ¡ng dá»± kiáº¿n";
+      if (headings[1]) headings[1].textContent = "TiÃªu thá»¥ theo thiáº¿t bá»‹";
+      if (headings[2]) headings[2].textContent = "Máº¹o tiáº¿t kiá»‡m Ä‘iá»‡n";
+
+      const totalCost = document.getElementById("totalCost");
+      if (totalCost) totalCost.textContent = formatVnd(totalCost.textContent);
+
+      const totalKwhLabel = document.getElementById("totalKwhLabel");
+      if (totalKwhLabel) {
+        const kwh = ((totalKwhLabel.textContent || "").match(/\d+/g) || ["0"]).join("");
+        totalKwhLabel.textContent = `Æ¯á»›c tÃ­nh dá»±a trÃªn ${kwh} kWh`;
+      }
+
+      const detailLink = document.querySelector("a.font-label-md.text-label-md.text-primary");
+      if (detailLink) detailLink.textContent = "Xem chi tiáº¿t";
+
+      const deltaWrap = document.getElementById("deltaPercent");
+      if (deltaWrap && deltaWrap.parentElement) {
+        deltaWrap.parentElement.lastChild.nodeValue = " so vá»›i thÃ¡ng trÆ°á»›c";
+      }
+    }
+
+    fixDashboardCopy();
+    [100, 400, 1200].forEach((delay) => window.setTimeout(fixDashboardCopy, delay));
+    window.addEventListener("load", fixDashboardCopy);
+  })();
+</script>
+  <script src="../_auth.js"></script>  <script src="../_nav.js"></script>  <script src="../_ui_exact_vi.js?v=20260506g"></script>
+  <script src="/_dashboard_detail.js"></script>
+</body></html>
+
+
+
+
+
+
+
+
+

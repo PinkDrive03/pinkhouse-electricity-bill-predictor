@@ -1,0 +1,337 @@
+﻿<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>PINKHOUSE Dashboard</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "on-secondary": "#ffffff",
+                        "inverse-on-surface": "#ecf1ff",
+                        "on-tertiary-container": "#fffdff",
+                        "on-primary-fixed": "#3f001c",
+                        "on-primary-fixed-variant": "#8e0048",
+                        "on-error-container": "#93000a",
+                        "on-tertiary": "#ffffff",
+                        "surface-container": "#e7eeff",
+                        "on-primary": "#ffffff",
+                        "on-surface-variant": "#594047",
+                        "outline-variant": "#e1bec6",
+                        "on-secondary-fixed": "#2c1325",
+                        "tertiary-fixed-dim": "#ffb1c3",
+                        "tertiary-fixed": "#ffd9e0",
+                        "on-secondary-fixed-variant": "#5c3d51",
+                        "tertiary-container": "#cd4070",
+                        "error-container": "#ffdad6",
+                        "primary": "#b7005e",
+                        "secondary-container": "#fdd0ea",
+                        "on-secondary-container": "#79576c",
+                        "on-tertiary-fixed-variant": "#8e0542",
+                        "primary-fixed-dim": "#ffb1c7",
+                        "primary-fixed": "#ffd9e2",
+                        "secondary": "#765469",
+                        "surface-tint": "#ba0060",
+                        "surface-container-highest": "#d8e3fb",
+                        "surface-container-high": "#dee8ff",
+                        "surface": "#f9f9ff",
+                        "primary-container": "#db2777",
+                        "error": "#ba1a1a",
+                        "surface-variant": "#d8e3fb",
+                        "on-surface": "#111c2d",
+                        "on-tertiary-fixed": "#3f0019",
+                        "inverse-surface": "#263143",
+                        "surface-bright": "#f9f9ff",
+                        "inverse-primary": "#ffb1c7",
+                        "on-primary-container": "#fffdff",
+                        "on-background": "#111c2d",
+                        "tertiary": "#ac2558",
+                        "on-error": "#ffffff",
+                        "outline": "#8d6f77",
+                        "secondary-fixed": "#ffd8ed",
+                        "background": "#f9f9ff",
+                        "surface-container-low": "#f0f3ff",
+                        "surface-dim": "#cfdaf2",
+                        "secondary-fixed-dim": "#e5bad3",
+                        "surface-container-lowest": "#ffffff"
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    spacing: {
+                        "lg": "40px",
+                        "gutter": "16px",
+                        "base": "8px",
+                        "sm": "12px",
+                        "md": "24px",
+                        "xs": "4px",
+                        "margin": "24px",
+                        "xl": "64px"
+                    },
+                    fontFamily: {
+                        "label-md": ["Plus Jakarta Sans"],
+                        "label-lg": ["Plus Jakarta Sans"],
+                        "headline-lg": ["Plus Jakarta Sans"],
+                        "label-sm": ["Plus Jakarta Sans"],
+                        "body-md": ["Plus Jakarta Sans"],
+                        "body-lg": ["Plus Jakarta Sans"],
+                        "headline-sm": ["Plus Jakarta Sans"],
+                        "headline-md": ["Plus Jakarta Sans"],
+                        "body-sm": ["Plus Jakarta Sans"]
+                    },
+                    fontSize: {
+                        "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "600" }],
+                        "label-lg": ["14px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "600" }],
+                        "headline-lg": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "label-sm": ["11px", { "lineHeight": "14px", "letterSpacing": "0.03em", "fontWeight": "500" }],
+                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                        "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
+                        "headline-sm": ["20px", { "lineHeight": "28px", "fontWeight": "600" }],
+                        "headline-md": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+                        "body-sm": ["14px", { "lineHeight": "20px", "fontWeight": "400" }]
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-surface text-on-surface font-body-md min-h-screen flex flex-col">
+<!-- TopNavBar -->
+<nav class="bg-surface docked full-width top-0 sticky z-50 bg-surface-container-low border-b border-outline-variant flat no shadows">
+<div class="flex justify-between items-center px-margin h-16 w-full max-w-7xl mx-auto">
+<div class="flex items-center gap-md">
+<span class="text-headline-md font-headline-md font-bold text-primary">PINKHOUSE</span>
+<div class="hidden md:flex gap-sm">
+<a class="text-on-surface-variant font-medium hover:text-primary transition-colors cursor-pointer active:opacity-80 px-sm py-xs font-plus-jakarta-sans text-label-lg" href="#">CÃ´ng cá»¥ d? ?oÃ¡n</a>
+<a class="text-primary font-bold border-b-2 border-primary pb-1 hover:text-primary transition-colors cursor-pointer active:opacity-80 px-sm py-xs font-plus-jakarta-sans text-label-lg" href="#">Báº£ng ?iá»u khiá»ƒn</a>
+<a class="text-on-surface-variant font-medium hover:text-primary transition-colors cursor-pointer active:opacity-80 px-sm py-xs font-plus-jakarta-sans text-label-lg" href="#">Máº¹o tiáº¿t kiá»‡m</a>
+<a class="text-on-surface-variant font-medium hover:text-primary transition-colors cursor-pointer active:opacity-80 px-sm py-xs font-plus-jakarta-sans text-label-lg" href="#">Lá»‹ch sá»­</a>
+</div>
+</div>
+<div class="flex items-center gap-sm">
+<button class="p-xs text-on-surface-variant hover:text-primary transition-colors cursor-pointer">
+<span class="material-symbols-outlined" data-icon="notifications">notifications</span>
+</button>
+<button class="p-xs text-on-surface-variant hover:text-primary transition-colors cursor-pointer">
+<span class="material-symbols-outlined" data-icon="settings">settings</span>
+</button>
+<img alt="User profile" class="w-8 h-8 rounded-full object-cover ml-sm border border-outline-variant" data-alt="A close-up, high-quality profile portrait of a confident young professional woman. The lighting is soft and studio-quality, casting a gentle glow that complements the clean, modern aesthetic of the UI. She has a subtle, welcoming smile. The background is a minimalist, slightly out-of-focus pastel tone, aligning perfectly with the Rosy Clarity design system's light mode and soft-corporate vibe." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDkn04xkjTKAz3MxG_YeodkJus2mPI4KYpxS-afzB4RHiLgJ2J6FujvwElNom3aa3XOYGhAI51RylcYP-F9GeUde8cf0RZW94Y08uHXRXacmiKSOA2Iab3U6YYAAIaVVyk5kiQa0WBptPzkTGdxU5AkKmIIU9E_t_yfS9WH7hamhwDNpk5I5IwfXp8hFT1zovaKWPj8d1O0LaGtkjykZ-b_-LFrS0YqCfy6q3TM4PMNOh31HS-PYeF16jqDs7eTIymm0gAxG9M3B1w"/>
+</div>
+</div>
+</nav>
+<div class="flex flex-1 w-full max-w-7xl mx-auto">
+<!-- SideNavBar -->
+<aside class="bg-surface-container-low hidden lg:flex flex-col p-base gap-xs docked h-screen w-64 left-0 border-r border-outline-variant flat no shadows shrink-0">
+<div class="p-sm flex items-center gap-sm mb-md">
+<div class="w-10 h-10 rounded-lg bg-primary-container flex items-center justify-center text-on-primary-container">
+<span class="material-symbols-outlined" data-icon="home">home</span>
+</div>
+<div>
+<h2 class="text-headline-sm font-headline-sm text-primary">Trung tÃ¢m Dá»± ?oÃ¡n</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Quáº£n lÃ½ ?i?n nÄƒng</p>
+</div>
+</div>
+<button class="w-full bg-primary text-on-primary font-label-lg text-label-lg py-sm px-md rounded-lg mb-md flex items-center justify-center gap-xs shadow-[0_2px_0_0_rgba(183,0,94,0.1)] hover:bg-surface-tint transition-colors"><span class="material-symbols-outlined text-[20px]" data-icon="add">add</span> Dá»± ?oÃ¡D? ?o?n m?i</button>
+<nav class="flex flex-col gap-xs flex-1 font-plus-jakarta-sans text-body-md">
+<a class="flex items-center gap-sm px-md py-sm bg-secondary-container text-on-secondary-container font-bold rounded-lg duration-200 ease-in-out hover:bg-surface-container-highest transition-all" href="#"><span class="material-symbols-outlined" data-icon="dashboard">dashboard</span> Tá»•ng quan</a>
+<a class="flex items-center gap-sm px-md py-sm text-on-surface-variant hover:bg-surface-container-high rounded-lg duration-200 ease-in-out hover:bg-surface-container-highest transition-all" href="#"><span class="material-symbols-outlined" data-icon="bolt">bolt</span> Nháº­p dá»¯ liá»‡u s? dá»¥ng</a>
+<a class="flex items-center gap-sm px-md py-sm text-on-surface-variant hover:bg-surface-container-high rounded-lg duration-200 ease-in-out hover:bg-surface-container-highest transition-all" href="#"><span class="material-symbols-outlined" data-icon="payments">payments</span> Dá»± ?oÃ¡n chi phÃ­</a>
+<a class="flex items-center gap-sm px-md py-sm text-on-surface-variant hover:bg-surface-container-high rounded-lg duration-200 ease-in-out hover:bg-surface-container-highest transition-all" href="#"><span class="material-symbols-outlined" data-icon="lightbulb">lightbulb</span> Máº¹o nÄƒng lÆ°á»£ng</a>
+<a class="flex items-center gap-sm px-md py-sm text-on-surface-variant hover:bg-surface-container-high rounded-lg duration-200 ease-in-out hover:bg-surface-container-highest transition-all" href="#"><span class="material-symbols-outlined" data-icon="home">home</span> NhÃ  cá»§a tÃ´i</a>
+</nav>
+<div class="flex flex-col gap-xs mt-auto pt-md border-t border-outline-variant font-plus-jakarta-sans text-body-md">
+<a class="flex items-center gap-sm px-md py-sm text-on-surface-variant hover:bg-surface-container-high rounded-lg duration-200 ease-in-out" href="#"><span class="material-symbols-outlined" data-icon="help">help</span> Há»— trá»£</a>
+<a class="flex items-center gap-sm px-md py-sm text-on-surface-variant hover:bg-surface-container-high rounded-lg duration-200 ease-in-out" href="#"><span class="material-symbols-outlined" data-icon="logout">logout</span> ÄÄƒng xuáº¥t</a>
+</div>
+</aside>
+<!-- Main Content -->
+<main class="flex-1 p-md lg:p-lg flex flex-col gap-lg overflow-y-auto">
+<header class="flex flex-col gap-xs">
+<h1 class="font-headline-lg text-headline-lg text-on-surface">Báº£ng ?iá»u khiá»ƒn Äiá»‡n nÄƒng</h1>
+<p class="font-body-md text-body-md text-on-surface-variant">Tá»•ng quan vá» má»©c tiÃªu thá»¥ vÃ  chi phÃ­ d? kiáº¿n cho ká»³ thanh toÃ¡n hiá»‡n táº¡i.</p>
+</header>
+<!-- Bento Grid -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-md">
+<!-- Total Cost Card -->
+<div class="col-span-1 md:col-span-6 lg:col-span-4 bg-surface-container-lowest border border-surface-container-high rounded-xl p-md flex flex-col justify-between relative overflow-hidden">
+<div class="absolute top-0 right-0 p-sm opacity-10 text-primary">
+<span class="material-symbols-outlined text-[100px]" data-icon="payments">payments</span>
+</div>
+<div>
+<h3 class="font-label-lg text-label-lg text-on-surface-variant flex items-center gap-xs"><span class="material-symbols-outlined text-[18px]" data-icon="monitoring">monitoring</span> Chi phÃ­ hÃ ng thÃ¡ng d? kiáº¿n</h3>
+<div class="mt-sm">
+<span class="font-headline-lg text-headline-lg text-primary block">1,850,000 Ã¢'Â«</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant bg-surface-container-low px-xs py-[2px] rounded inline-flex items-center gap-[2px] mt-xs"><span class="material-symbols-outlined text-[14px] text-tertiary">arrow_upward</span> +4.2% so v?i thÃ¡ng trÆ°á»›c</span>
+</div>
+</div>
+<div class="mt-lg pt-sm border-t border-surface-container-high flex justify-between items-center">
+<span class="font-body-sm text-body-sm text-on-surface-variant">Æ¯á»›c tÃ­nh d?a trÃªn 420 kWh</span>
+<a class="font-label-md text-label-md text-primary hover:underline" href="#">Xem chi tiáº¿t</a>
+</div>
+</div>
+<!-- Device Breakdown Chart (Simulated) -->
+<div class="col-span-1 md:col-span-6 lg:col-span-8 bg-surface-container-lowest border border-surface-container-high rounded-xl p-md flex flex-col">
+<div class="flex justify-between items-center mb-md">
+<h3 class="font-label-lg text-label-lg text-on-surface-variant">TiÃªu thá»¥ theo thiáº¿t bá»‹</h3>
+<button class="font-label-sm text-label-sm text-on-surface-variant flex items-center gap-xs hover:text-primary transition-colors">ThÃ¡ng nÃ y <span class="material-symbols-outlined text-[16px]" data-icon="expand_more">expand_more</span></button>
+</div>
+<div class="flex-1 flex flex-col justify-center gap-sm">
+<!-- Bar Item 1 -->
+<div class="flex items-center gap-sm">
+<div class="w-32 font-body-sm text-body-sm text-on-surface truncate">MÃ¡y ?iá»u hÃ²a</div>
+<div class="flex-1 h-2 bg-surface-container rounded-full overflow-hidden">
+<div class="h-full bg-primary rounded-full" style="width: 45%;"></div>
+</div>
+<div class="w-12 text-right font-label-md text-label-md text-on-surface">45%</div>
+</div>
+<!-- Bar Item 2 -->
+<div class="flex items-center gap-sm">
+<div class="w-32 font-body-sm text-body-sm text-on-surface truncate">Tá»§ láº¡nh</div>
+<div class="flex-1 h-2 bg-surface-container rounded-full overflow-hidden">
+<div class="h-full bg-tertiary-fixed-dim rounded-full" style="width: 25%;"></div>
+</div>
+<div class="w-12 text-right font-label-md text-label-md text-on-surface">25%</div>
+</div>
+<!-- Bar Item 3 -->
+<div class="flex items-center gap-sm">
+<div class="w-32 font-body-sm text-body-sm text-on-surface truncate">Chiáº¿u sÃ¡ng</div>
+<div class="flex-1 h-2 bg-surface-container rounded-full overflow-hidden">
+<div class="h-full bg-outline rounded-full" style="width: 15%;"></div>
+</div>
+<div class="w-12 text-right font-label-md text-label-md text-on-surface">15%</div>
+</div>
+<!-- Bar Item 4 -->
+<div class="flex items-center gap-sm">
+<div class="w-32 font-body-sm text-body-sm text-on-surface truncate">KhÃ¡c</div>
+<div class="flex-1 h-2 bg-surface-container rounded-full overflow-hidden">
+<div class="h-full bg-surface-container-highest rounded-full" style="width: 15%;"></div>
+</div>
+<div class="w-12 text-right font-label-md text-label-md text-on-surface">15%</div>
+</div>
+</div>
+</div>
+<!-- Savings Tips Section ('Máº¹o tiáº¿t kiá»‡m ?i?n') -->
+<div class="col-span-1 md:col-span-12 bg-surface-container-low rounded-xl p-md border border-outline-variant flex flex-col md:flex-row gap-md items-start">
+<div class="w-12 h-12 rounded-full bg-secondary-container text-on-secondary-container flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined" data-icon="lightbulb" data-weight="fill">lightbulb</span>
+</div>
+<div class="flex-1">
+<h3 class="font-headline-sm text-headline-sm text-on-surface mb-xs">Máº¹o tiáº¿t kiá»‡m ?i?n</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-sm">Dá»±a trÃªn dá»¯ liá»‡u cá»§a báº¡n, Ä‘Ã¢y lÃ  cÃ¡c chiáº¿n lÆ°á»£c cÃ¡ nhÃ¢n hÃ³a Ä‘á»ƒ giáº£m hÃ³a Ä‘Æ¡n cá»§a báº¡n.</p>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-sm">
+<div class="bg-surface-container-lowest p-sm rounded-lg border border-surface-container-high flex gap-sm items-start">
+<span class="material-symbols-outlined text-tertiary mt-[2px]" data-icon="ac_unit">ac_unit</span>
+<div>
+<h4 class="font-label-md text-label-md text-on-surface">Optimize AC Temp</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-xs">Dá»±a trÃªn dá»¯ liá»‡u cá»§a báº¡n, Ä‘Ã¢y lÃ  cÃ¡c chiáº¿n lÆ°á»£c cÃ¡ nhÃ¢n hÃ³a Ä‘á»ƒ giáº£m hÃ³a Ä‘Æ¡n cá»§a báº¡n.</p>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-sm rounded-lg border border-surface-container-high flex gap-sm items-start">
+<span class="material-symbols-outlined text-tertiary mt-[2px]" data-icon="kitchen">kitchen</span>
+<div>
+<h4 class="font-label-md text-label-md text-on-surface">Fridge Maintenance</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-xs">Dá»±a trÃªn dá»¯ liá»‡u cá»§a báº¡n, Ä‘Ã¢y lÃ  cÃ¡c chiáº¿n lÆ°á»£c cÃ¡ nhÃ¢n hÃ³a Ä‘á»ƒ giáº£m hÃ³a Ä‘Æ¡n cá»§a báº¡n.</p>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-sm rounded-lg border border-surface-container-high flex gap-sm items-start">
+<span class="material-symbols-outlined text-tertiary mt-[2px]" data-icon="power_off">power_off</span>
+<div>
+<h4 class="font-label-md text-label-md text-on-surface">Unplug Idle Devices</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-xs">Dá»±a trÃªn dá»¯ liá»‡u cá»§a báº¡n, Ä‘Ã¢y lÃ  cÃ¡c chiáº¿n lÆ°á»£c cÃ¡ nhÃ¢n hÃ³a Ä‘á»ƒ giáº£m hÃ³a Ä‘Æ¡n cá»§a báº¡n.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+</div>
+<!-- Footer -->
+<footer class="bg-surface-container-highest flex flex-col md:flex-row justify-between items-center py-md px-margin w-full flat no shadows">
+<span class="font-plus-jakarta-sans text-label-sm text-on-surface-variant">© 2026 PINKHOUSE</span>
+<div class="flex gap-md mt-sm md:mt-0">
+<a class="font-plus-jakarta-sans text-label-sm text-on-surface-variant hover:text-primary transition-colors" href="#">Äiá»u khoáº£n dá»‹ch vá»¥</a>
+<a class="font-plus-jakarta-sans text-label-sm text-on-surface-variant hover:text-primary transition-colors" href="#">ChÃ­nh sÃ¡ch báº£o máº­t</a>
+<a class="font-plus-jakarta-sans text-label-sm text-on-surface-variant hover:text-primary transition-colors" href="#">LiÃªn há»‡ há»— trá»£</a>
+</div>
+</footer>
+<script>
+  (function () {
+    function formatVnd(text) {
+      const digits = (String(text || "").match(/\d+/g) || []).join("");
+      const value = digits ? Number(digits) : 0;
+      return new Intl.NumberFormat("vi-VN").format(value) + "Ä‘";
+    }
+
+    function fixDashboardStatic() {
+      const titles = document.querySelectorAll("main h3");
+      if (titles[0]) titles[0].textContent = "Chi phÃ­ hÃ ng thÃ¡ng dá»± kiáº¿n";
+      if (titles[1]) titles[1].textContent = "TiÃªu thá»¥ theo thiáº¿t bá»‹";
+      if (titles[2]) titles[2].textContent = "Máº¹o tiáº¿t kiá»‡m Ä‘iá»‡n";
+
+      const costNode = document.querySelector(".col-span-1.md\\:col-span-6.lg\\:col-span-4 .font-headline-lg.text-headline-lg.text-primary.block");
+      if (costNode) costNode.textContent = formatVnd(costNode.textContent);
+
+      const metaNodes = document.querySelectorAll(".col-span-1.md\\:col-span-6.lg\\:col-span-4 .mt-lg .font-body-sm, .col-span-1.md\\:col-span-6.lg\\:col-span-4 .mt-lg a");
+      if (metaNodes[0]) {
+        const kwh = ((metaNodes[0].textContent || "").match(/\d+/g) || ["0"]).join("");
+        metaNodes[0].textContent = `Æ¯á»›c tÃ­nh dá»±a trÃªn ${kwh} kWh`;
+      }
+      if (metaNodes[1]) metaNodes[1].textContent = "Xem chi tiáº¿t";
+
+      const monthBtn = document.querySelector(".col-span-1.md\\:col-span-6.lg\\:col-span-8 button.font-label-sm");
+      if (monthBtn) monthBtn.childNodes[0].nodeValue = "ThÃ¡ng nÃ y ";
+
+      const rowNames = document.querySelectorAll(".col-span-1.md\\:col-span-6.lg\\:col-span-8 .w-32.font-body-sm.text-body-sm.text-on-surface.truncate");
+      ["Äiá»u hÃ²a", "Tá»§ láº¡nh", "Quáº¡t Ä‘iá»‡n", "MÃ¡y tÃ­nh/Laptop"].forEach((name, index) => {
+        if (rowNames[index]) rowNames[index].textContent = name;
+      });
+
+      const intro = document.querySelector(".col-span-1.md\\:col-span-12 p.font-body-sm.text-body-sm.text-on-surface-variant");
+      if (intro) intro.textContent = "Dá»±a trÃªn dá»¯ liá»‡u cá»§a báº¡n, Ä‘Ã¢y lÃ  cÃ¡c chiáº¿n lÆ°á»£c cÃ¡ nhÃ¢n hÃ³a Ä‘á»ƒ giáº£m hÃ³a Ä‘Æ¡n cá»§a báº¡n.";
+
+      const tipTitles = document.querySelectorAll(".col-span-1.md\\:col-span-12 h4.font-label-md");
+      const tipBodies = document.querySelectorAll(".col-span-1.md\\:col-span-12 .grid p.font-body-sm");
+      const titlesMap = [
+        "Giáº£m nhiá»‡t Ä‘á»™ Ä‘iá»u hÃ²a há»£p lÃ½",
+        "Báº£o dÆ°á»¡ng tá»§ láº¡nh Ä‘á»‹nh ká»³",
+        "RÃºt thiáº¿t bá»‹ khi khÃ´ng dÃ¹ng"
+      ];
+      const bodiesMap = [
+        "CÃ i Ä‘iá»u hÃ²a 26-27Â°C vÃ  dÃ¹ng kÃ¨m quáº¡t Ä‘á»ƒ giáº£m cÃ´ng suáº¥t tiÃªu thá»¥.",
+        "Vá»‡ sinh dÃ n láº¡nh, kiá»ƒm tra gioÄƒng cá»­a giÃºp tá»§ cháº¡y á»•n Ä‘á»‹nh vÃ  Ã­t hao Ä‘iá»‡n hÆ¡n.",
+        "Ngáº¯t nguá»“n cÃ¡c thiáº¿t bá»‹ chá» giÃºp giáº£m Ä‘iá»‡n nÄƒng ná»n má»—i thÃ¡ng."
+      ];
+      tipTitles.forEach((node, index) => {
+        if (titlesMap[index]) node.textContent = titlesMap[index];
+      });
+      tipBodies.forEach((node, index) => {
+        if (bodiesMap[index]) node.textContent = bodiesMap[index];
+      });
+    }
+
+    fixDashboardStatic();
+    [100, 400, 1200].forEach((delay) => window.setTimeout(fixDashboardStatic, delay));
+  })();
+</script>
+  <script src="../_auth.js"></script>  <script src="../_nav.js"></script>  <script src="../_ui_exact_vi.js?v=20260506g"></script>
+  <script src="/_savings_plan_page.js"></script>
+</body></html>
+
+
+
+
+
+
+
+

@@ -1,0 +1,825 @@
+﻿<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>PINKHOUSE - HÃ†Â°Ã¡Â»â€ºng dÃ¡ÂºÂ«n thiÃ¡ÂºÂ¿t lÃ¡ÂºÂ­p</title>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Theme Configuration -->
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-secondary": "#ffffff",
+                        "inverse-on-surface": "#ecf1ff",
+                        "on-tertiary-container": "#fffdff",
+                        "on-primary-fixed": "#3f001c",
+                        "on-primary-fixed-variant": "#8e0048",
+                        "on-error-container": "#93000a",
+                        "on-tertiary": "#ffffff",
+                        "surface-container": "#e7eeff",
+                        "on-primary": "#ffffff",
+                        "on-surface-variant": "#594047",
+                        "outline-variant": "#e1bec6",
+                        "on-secondary-fixed": "#2c1325",
+                        "tertiary-fixed-dim": "#ffb1c3",
+                        "tertiary-fixed": "#ffd9e0",
+                        "on-secondary-fixed-variant": "#5c3d51",
+                        "tertiary-container": "#cd4070",
+                        "error-container": "#ffdad6",
+                        "primary": "#b7005e",
+                        "secondary-container": "#fdd0ea",
+                        "on-secondary-container": "#79576c",
+                        "on-tertiary-fixed-variant": "#8e0542",
+                        "primary-fixed-dim": "#ffb1c7",
+                        "primary-fixed": "#ffd9e2",
+                        "secondary": "#765469",
+                        "surface-tint": "#ba0060",
+                        "surface-container-highest": "#d8e3fb",
+                        "surface-container-high": "#dee8ff",
+                        "surface": "#f9f9ff",
+                        "primary-container": "#db2777",
+                        "error": "#ba1a1a",
+                        "surface-variant": "#d8e3fb",
+                        "on-surface": "#111c2d",
+                        "on-tertiary-fixed": "#3f0019",
+                        "inverse-surface": "#263143",
+                        "surface-bright": "#f9f9ff",
+                        "inverse-primary": "#ffb1c7",
+                        "on-primary-container": "#fffdff",
+                        "on-background": "#111c2d",
+                        "tertiary": "#ac2558",
+                        "on-error": "#ffffff",
+                        "outline": "#8d6f77",
+                        "secondary-fixed": "#ffd8ed",
+                        "background": "#f9f9ff",
+                        "surface-container-low": "#f0f3ff",
+                        "surface-dim": "#cfdaf2",
+                        "secondary-fixed-dim": "#e5bad3",
+                        "surface-container-lowest": "#ffffff"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "lg": "40px",
+                        "gutter": "16px",
+                        "base": "8px",
+                        "sm": "12px",
+                        "md": "24px",
+                        "xs": "4px",
+                        "margin": "24px",
+                        "xl": "64px"
+                    },
+                    "fontFamily": {
+                        "label-md": ["Plus Jakarta Sans"],
+                        "label-lg": ["Plus Jakarta Sans"],
+                        "headline-lg": ["Plus Jakarta Sans"],
+                        "label-sm": ["Plus Jakarta Sans"],
+                        "body-md": ["Plus Jakarta Sans"],
+                        "body-lg": ["Plus Jakarta Sans"],
+                        "headline-sm": ["Plus Jakarta Sans"],
+                        "headline-md": ["Plus Jakarta Sans"],
+                        "body-sm": ["Plus Jakarta Sans"]
+                    },
+                    "fontSize": {
+                        "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "600" }],
+                        "label-lg": ["14px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "600" }],
+                        "headline-lg": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "label-sm": ["11px", { "lineHeight": "14px", "letterSpacing": "0.03em", "fontWeight": "500" }],
+                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                        "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
+                        "headline-sm": ["20px", { "lineHeight": "28px", "fontWeight": "600" }],
+                        "headline-md": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+                        "body-sm": ["14px", { "lineHeight": "20px", "fontWeight": "400" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap');
+        
+        /* Ambient Pink Shadow for primary buttons */
+        .shadow-ambient-pink {
+            box-shadow: 0 4px 14px 0 rgba(183, 0, 94, 0.2);
+        }
+    </style>
+</head>
+<body class="bg-surface-container-lowest text-on-surface font-body-md min-h-screen flex flex-col antialiased">
+<!-- Top Navigation (Simplified for Transactional Flow) -->
+<header class="w-full flex items-center justify-between px-margin h-16 bg-surface border-b border-surface-container-high sticky top-0 z-50">
+<div class="flex items-center gap-xs">
+<span class="material-symbols-outlined text-primary text-2xl" style="font-variation-settings: 'FILL' 1;">bolt</span>
+<span class="font-headline-sm text-headline-sm text-primary tracking-tight">PINKHOUSE</span>
+</div>
+<button class="flex items-center gap-xs text-on-surface-variant hover:text-primary transition-colors cursor-pointer">
+<span class="font-label-lg text-label-lg">HÃ¡Â»Â§y</span>
+<span class="material-symbols-outlined text-lg">close</span>
+</button>
+</header>
+<!-- Main Content Container -->
+<main class="flex-grow w-full max-w-3xl mx-auto px-margin py-xl flex flex-col gap-lg">
+<!-- Page Header -->
+<div class="flex flex-col gap-base text-center">
+<h1 class="font-headline-lg text-headline-lg text-on-surface">ThiÃ¡ÂºÂ¿t lÃ¡ÂºÂ­p dÃ¡Â»Â¯ liÃ¡Â»â€¡u</h1>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-lg mx-auto">Cung cÃ¡ÂºÂ¥p thÃƒÂ´ng tin vÃ¡Â»Â khÃƒÂ´ng gian vÃƒÂ  thÃƒÂ³i quen s? dÃ¡Â»Â¥ng ?i?n Ã„â€˜Ã¡Â»Æ’ nhÃ¡ÂºÂ­n d? bÃƒÂ¡o chÃƒÂ­nh xÃƒÂ¡c nhÃ¡ÂºÂ¥t.</p>
+</div>
+<!-- Wizard Steps Container -->
+<div class="flex flex-col gap-md">
+<!-- STEP 1: Profile Info -->
+<section class="bg-surface border border-outline-variant rounded-xl p-md flex flex-col gap-md relative overflow-hidden">
+<!-- Step Indicator Badge -->
+<div class="absolute top-0 left-0 bg-primary-container text-on-primary-container px-sm py-xs rounded-br-lg font-label-sm text-label-sm">BÃ†Â¯Ã¡Â»Å¡C 1</div>
+<div class="flex flex-col gap-xs mt-sm">
+<h2 class="font-headline-sm text-headline-sm text-on-surface">ThÃƒÂ´ng tin khÃƒÂ´ng gian sÃ¡Â»â€˜ng</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">ChÃ¡Â»Ân loÃ¡ÂºÂ¡i hÃƒÂ¬nh nhÃƒÂ  Ã¡Â»Å¸ phÃƒÂ¹ hÃ¡Â»Â£p v?i bÃ¡ÂºÂ¡n.</p>
+</div>
+<!-- Housing Type Selection (Bento-style Grid) -->
+<div class="flex flex-col gap-base">
+<label class="font-label-lg text-label-lg text-on-surface">LoÃ¡ÂºÂ¡i hÃƒÂ¬nh nhÃƒÂ  Ã¡Â»Å¸</label>
+<div class="grid grid-cols-2 md:grid-cols-3 gap-sm">
+<!-- Active Option -->
+<div class="border-2 border-primary bg-primary-fixed rounded-lg p-sm flex flex-col items-center justify-center gap-base cursor-pointer text-on-primary-fixed transition-colors h-24">
+<span class="material-symbols-outlined text-3xl" style="font-variation-settings: 'FILL' 1;">bed</span>
+<span class="font-label-md text-label-md">PhÃƒÂ²ng trÃ¡Â»Â</span>
+</div>
+<!-- Inactive Options -->
+<div class="border border-outline-variant bg-surface rounded-lg p-sm flex flex-col items-center justify-center gap-base cursor-pointer text-on-surface-variant hover:bg-surface-container-low transition-colors h-24">
+<span class="material-symbols-outlined text-3xl">apartment</span>
+<span class="font-label-md text-label-md">Chung cÃ†Â°</span>
+</div>
+<div class="border border-outline-variant bg-surface rounded-lg p-sm flex flex-col items-center justify-center gap-base cursor-pointer text-on-surface-variant hover:bg-surface-container-low transition-colors h-24">
+<span class="material-symbols-outlined text-3xl">home_work</span>
+<span class="font-label-md text-label-md">CÃ„Æ’n hÃ¡Â»â„¢ mini</span>
+</div>
+<div class="border border-outline-variant bg-surface rounded-lg p-sm flex flex-col items-center justify-center gap-base cursor-pointer text-on-surface-variant hover:bg-surface-container-low transition-colors h-24">
+<span class="material-symbols-outlined text-3xl">domain</span>
+<span class="font-label-md text-label-md">KÃƒÂ½ tÃƒÂºc xÃƒÂ¡</span>
+</div>
+<div class="border border-outline-variant bg-surface rounded-lg p-sm flex flex-col items-center justify-center gap-base cursor-pointer text-on-surface-variant hover:bg-surface-container-low transition-colors h-24 md:col-span-2">
+<span class="material-symbols-outlined text-3xl">house</span>
+<span class="font-label-md text-label-md">NhÃƒÂ  nguyÃƒÂªn cÃ„Æ’n</span>
+</div>
+</div>
+</div>
+<!-- Usage Habit (Segmented Control style) -->
+<div class="flex flex-col gap-base pt-sm border-t border-surface-container-high">
+<label class="font-label-lg text-label-lg text-on-surface">BÃ¡ÂºÂ¡n cÃƒÂ³ hay Ã¡Â»Å¸ nhÃƒÂ  khÃƒÂ´ng?</label>
+<div class="flex flex-col sm:flex-row gap-sm">
+<div class="flex-1 border border-outline-variant bg-surface rounded-lg px-sm py-base flex items-center justify-center gap-base cursor-pointer hover:bg-surface-container-low transition-colors">
+<span class="material-symbols-outlined text-on-surface-variant">home</span>
+<span class="font-label-md text-label-md text-on-surface-variant">ThÃ†Â°Ã¡Â»Âng xuyÃƒÂªn</span>
+</div>
+<!-- Active Segment -->
+<div class="flex-1 border border-primary bg-primary-fixed rounded-lg px-sm py-base flex items-center justify-center gap-base cursor-pointer transition-colors">
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">work</span>
+<span class="font-label-md text-label-md text-on-primary-fixed">Ã„Âi lÃƒÂ m ban ngÃƒÂ y</span>
+</div>
+<div class="flex-1 border border-outline-variant bg-surface rounded-lg px-sm py-base flex items-center justify-center gap-base cursor-pointer hover:bg-surface-container-low transition-colors">
+<span class="material-symbols-outlined text-on-surface-variant">flight_takeoff</span>
+<span class="font-label-md text-label-md text-on-surface-variant">ÃƒÂt khi</span>
+</div>
+</div>
+</div>
+</section>
+<!-- STEP 2: Device List -->
+<section class="bg-surface border border-outline-variant rounded-xl p-md flex flex-col gap-md relative overflow-hidden">
+<div class="absolute top-0 left-0 bg-surface-container-highest text-on-surface-variant px-sm py-xs rounded-br-lg font-label-sm text-label-sm">BÃ†Â¯Ã¡Â»Å¡C 2</div>
+<div class="flex flex-col gap-xs mt-sm">
+<h2 class="font-headline-sm text-headline-sm text-on-surface">ThiÃ¡ÂºÂ¿t bÃ¡Â»â€¹ tiÃƒÂªu thÃ¡Â»Â¥ ?i?n</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Ã†Â¯Ã¡Â»â€ºc tÃƒÂ­nh sÃ¡Â»â€˜ giÃ¡Â»Â s? dÃ¡Â»Â¥ng trung bÃƒÂ¬nh m?i ngÃƒÂ y cho cÃƒÂ¡c thiÃ¡ÂºÂ¿t bÃ¡Â»â€¹ chÃƒÂ­nh.</p>
+</div>
+<div class="flex flex-col border border-surface-container-high rounded-lg overflow-hidden bg-surface-bright">
+<!-- Device Row: AC -->
+<div class="flex items-center justify-between p-sm border-b border-surface-container-high hover:bg-surface-container-low transition-colors">
+<div class="flex items-center gap-sm">
+<div class="w-10 h-10 rounded-full bg-secondary-container flex items-center justify-center text-on-secondary-container">
+<span class="material-symbols-outlined">ac_unit</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-lg text-label-lg text-on-surface">Ã„ÂiÃ¡Â»Âu hoÃƒÂ </span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">CÃƒÂ´ng suÃ¡ÂºÂ¥t lÃ¡Â»â€ºn</span>
+</div>
+</div>
+<div class="flex items-center bg-surface-container-low rounded-lg border border-transparent focus-within:border-primary transition-colors">
+<button class="w-8 h-8 flex items-center justify-center text-on-surface-variant hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-sm">remove</span>
+</button>
+<input aria-label="GiÃ¡Â»Â s? dÃ¡Â»Â¥ng" class="w-10 text-center bg-transparent border-none font-label-lg text-label-lg text-on-surface focus:ring-0 p-0 h-8 device-hours-input" data-device-id="ac" data-device-name="Ã„ÂiÃ¡Â»Âu hÃƒÂ²a" type="text" value="8"/>
+<button class="w-8 h-8 flex items-center justify-center text-on-surface-variant hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-sm">add</span>
+</button>
+<span class="pr-sm font-label-sm text-label-sm text-on-surface-variant">giÃ¡Â»Â</span>
+</div>
+</div>
+<!-- Device Row: Fridge -->
+<div class="flex items-center justify-between p-sm border-b border-surface-container-high hover:bg-surface-container-low transition-colors">
+<div class="flex items-center gap-sm">
+<div class="w-10 h-10 rounded-full bg-surface-container-high flex items-center justify-center text-on-surface-variant">
+<span class="material-symbols-outlined">kitchen</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-lg text-label-lg text-on-surface">TÃ¡Â»Â§ lÃ¡ÂºÂ¡nh</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">CÃ¡ÂºÂ¯m 24/24</span>
+</div>
+</div>
+<div class="flex items-center bg-surface-container-low rounded-lg border border-transparent opacity-70 pointer-events-none">
+<input aria-label="GiÃ¡Â»Â s? dÃ¡Â»Â¥ng" class="w-10 text-center bg-transparent border-none font-label-lg text-label-lg text-on-surface focus:ring-0 p-0 h-8 device-hours-input" data-device-id="fridge" data-device-name="TÃ¡Â»Â§ lÃ¡ÂºÂ¡nh" disabled="" type="text" value="24"/>
+<span class="pr-sm font-label-sm text-label-sm text-on-surface-variant">giÃ¡Â»Â</span>
+</div>
+</div>
+<!-- Device Row: Fan -->
+<div class="flex items-center justify-between p-sm border-b border-surface-container-high hover:bg-surface-container-low transition-colors">
+<div class="flex items-center gap-sm">
+<div class="w-10 h-10 rounded-full bg-secondary-container flex items-center justify-center text-on-secondary-container">
+<span class="material-symbols-outlined">mode_fan</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-lg text-label-lg text-on-surface">QuÃ¡ÂºÂ¡t ?i?n</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">QuÃ¡ÂºÂ¡t bÃƒÂ n/Ã„â€˜Ã¡Â»Â©ng</span>
+</div>
+</div>
+<div class="flex items-center bg-surface-container-low rounded-lg border border-transparent focus-within:border-primary transition-colors">
+<button class="w-8 h-8 flex items-center justify-center text-on-surface-variant hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-sm">remove</span>
+</button>
+<input aria-label="GiÃ¡Â»Â s? dÃ¡Â»Â¥ng" class="w-10 text-center bg-transparent border-none font-label-lg text-label-lg text-on-surface focus:ring-0 p-0 h-8 device-hours-input" data-device-id="fan" data-device-name="QuÃ¡ÂºÂ¡t ?i?n" type="text" value="12"/>
+<button class="w-8 h-8 flex items-center justify-center text-on-surface-variant hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-sm">add</span>
+</button>
+<span class="pr-sm font-label-sm text-label-sm text-on-surface-variant">giÃ¡Â»Â</span>
+</div>
+</div>
+<!-- Device Row: Laptop -->
+<div class="flex items-center justify-between p-sm hover:bg-surface-container-low transition-colors">
+<div class="flex items-center gap-sm">
+<div class="w-10 h-10 rounded-full bg-surface-container-high flex items-center justify-center text-on-surface-variant">
+<span class="material-symbols-outlined">laptop_mac</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-lg text-label-lg text-on-surface">MÃƒÂ¡y tÃƒÂ­nh/Laptop</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">LÃƒÂ m viÃ¡Â»â€¡c/GiÃ¡ÂºÂ£i trÃƒÂ­</span>
+</div>
+</div>
+<div class="flex items-center bg-surface-container-low rounded-lg border border-transparent focus-within:border-primary transition-colors">
+<button class="w-8 h-8 flex items-center justify-center text-on-surface-variant hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-sm">remove</span>
+</button>
+<input aria-label="GiÃ¡Â»Â s? dÃ¡Â»Â¥ng" class="w-10 text-center bg-transparent border-none font-label-lg text-label-lg text-on-surface focus:ring-0 p-0 h-8 device-hours-input" data-device-id="laptop" data-device-name="MÃƒÂ¡y tÃƒÂ­nh/Laptop" type="text" value="4"/>
+<button class="w-8 h-8 flex items-center justify-center text-on-surface-variant hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-sm">add</span>
+</button>
+<span class="pr-sm font-label-sm text-label-sm text-on-surface-variant">giÃ¡Â»Â</span>
+</div>
+</div>
+</div>
+<button class="flex items-center justify-center gap-xs text-primary font-label-md text-label-md mt-xs hover:bg-surface-container-low py-sm rounded-lg border border-dashed border-outline-variant transition-colors">
+<span class="material-symbols-outlined">add_circle</span>
+<span>ThÃƒÂªm thiÃ¡ÂºÂ¿t bÃ¡Â»â€¹ khÃƒÂ¡c</span>
+</button>
+</section>
+<!-- STEP 3: Rate -->
+<section class="bg-surface border border-outline-variant rounded-xl p-md flex flex-col gap-md relative overflow-hidden">
+<div class="absolute top-0 left-0 bg-surface-container-highest text-on-surface-variant px-sm py-xs rounded-br-lg font-label-sm text-label-sm">BÃ†Â¯Ã¡Â»Å¡C 3</div>
+<div class="flex flex-col gap-xs mt-sm">
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Ã„ÂÃ†Â¡n giÃƒÂ¡ ?i?n nÃ„Æ’ng</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">NhÃ¡ÂºÂ­p giÃƒÂ¡ ?i?n bÃ¡ÂºÂ¡n ?ang phÃ¡ÂºÂ£i trÃ¡ÂºÂ£ Ã„â€˜Ã¡Â»Æ’ tÃƒÂ­nh toÃƒÂ¡n chi phÃƒÂ­.</p>
+</div>
+<div class="flex flex-col gap-sm">
+<div class="flex flex-wrap gap-xs">
+<!-- Quick select chips -->
+<div class="bg-secondary-container text-on-secondary-container px-sm py-xs rounded-full font-label-sm text-label-sm cursor-pointer hover:bg-tertiary-container hover:text-on-tertiary-container transition-colors">GiÃƒÂ¡ nhÃƒÂ  nÃ†Â°Ã¡Â»â€ºc (BÃ¡ÂºÂ­c thang)</div>
+<div class="bg-surface-container-high text-on-surface-variant px-sm py-xs rounded-full font-label-sm text-label-sm cursor-pointer hover:bg-surface-variant transition-colors border border-outline-variant">3.500? / kWh</div>
+<div class="bg-primary-fixed text-on-primary-fixed px-sm py-xs rounded-full font-label-sm text-label-sm cursor-pointer border border-primary transition-colors">4.000? / kWh</div>
+</div>
+<div class="relative w-full md:w-1/2 mt-base">
+<label class="block font-label-md text-label-md text-on-surface mb-xs">GiÃƒÂ¡ tuÃ¡Â»Â³ chÃ¡Â»â€°nh</label>
+<div class="relative flex items-center">
+<span class="absolute left-sm text-on-surface-variant material-symbols-outlined text-lg">payments</span>
+<input class="w-full bg-surface-container-low border border-transparent focus:border-primary focus:bg-surface rounded-lg py-[10px] pl-10 pr-16 font-body-md text-body-md text-on-surface outline-none transition-all placeholder:text-outline" id="rateInput" placeholder="NhÃ¡ÂºÂ­p giÃƒÂ¡ ?i?n" type="text" value="4000"/>
+<span class="absolute right-sm font-label-sm text-label-sm text-on-surface-variant">VND/kWh</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Final Actions -->
+<div class="flex items-center justify-between pt-lg border-t border-surface-container-highest mt-sm">
+<button class="font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface px-md py-[10px] rounded-lg transition-colors flex items-center gap-xs cursor-pointer">
+<span class="material-symbols-outlined text-lg">arrow_back</span>
+                    Quay lÃ¡ÂºÂ¡i
+                </button>
+<button class="bg-primary text-on-primary font-label-lg text-label-lg px-xl py-[12px] rounded-lg shadow-ambient-pink hover:bg-surface-tint transition-all active:scale-95 flex items-center gap-xs cursor-pointer" id="saveSetupBtn" type="button">
+                    HoÃƒÂ n tÃ¡ÂºÂ¥t thiÃ¡ÂºÂ¿t lÃ¡ÂºÂ­p
+                    <span class="material-symbols-outlined text-lg">check_circle</span>
+</button>
+</div>
+</div>
+</main>
+<script>
+  (function () {
+    const BACKEND_URL = "http://localhost:3000";
+    const LOCAL_DRAFT_KEY = "pinkhouseSetupDraft";
+    const LOCAL_HISTORY_KEY = "pinkhouseSetupHistory";
+    const currentDate = new Date();
+    const rateInput = document.getElementById("rateInput");
+    const saveBtn = document.getElementById("saveSetupBtn");
+    const cancelBtn = document.querySelector("header button");
+    const backBtn = document.querySelector("main > div > div:last-child button");
+    const sections = document.querySelectorAll("main section");
+    const housingGrid = document.querySelector("section:nth-of-type(1) .grid");
+    const presenceRow = document.querySelector("section:nth-of-type(1) .sm\\:flex-row");
+    const deviceList = document.querySelector("section:nth-of-type(2) .flex.flex-col.border.border-surface-container-high.rounded-lg.overflow-hidden.bg-surface-bright");
+    const addDeviceButton = document.querySelector("section:nth-of-type(2) > button");
+    const rateChipRow = document.querySelector("section:nth-of-type(3) .flex.flex-wrap.gap-xs");
+    const scheduleFieldHost = document.createElement("div");
+
+    const HOUSING_OPTIONS = [
+      { value: "Phòng trọ", label: "Phòng trọ", icon: "bed" },
+      { value: "Chung cư", label: "Chung cư", icon: "apartment" },
+      { value: "Căn hộ mini", label: "Căn hộ mini", icon: "home_work" },
+      { value: "Ký túc xá", label: "Ký túc xá", icon: "domain" },
+      { value: "Nhà nguyên căn", label: "Nhà nguyên căn", icon: "house", wide: true }
+    ];
+
+    const PRESENCE_OPTIONS = [
+      { value: "Thường xuyên", label: "Thường xuyên", icon: "home" },
+      { value: "Đi làm ban ngày", label: "Đi làm ban ngày", icon: "work" },
+      { value: "Ít khi", label: "Ít khi", icon: "flight_takeoff" }
+    ];
+
+    const DEVICE_CATALOG = [
+      { id: "ac", name: "Điều hòa", subtitle: "Công suất lớn", icon: "ac_unit", hours: 8, quantity: 1 },
+      { id: "fridge", name: "Tủ lạnh", subtitle: "Cắm 24/24", icon: "kitchen", hours: 24, quantity: 1 },
+      { id: "fan", name: "Quạt điện", subtitle: "Quạt bàn/đứng", icon: "mode_fan", hours: 12, quantity: 1 },
+      { id: "laptop", name: "Máy tính/Laptop", subtitle: "Làm việc/Giải trí", icon: "laptop_mac", hours: 4, quantity: 1 },
+      { id: "light", name: "Đèn", subtitle: "Bóng LED/CFL", icon: "lightbulb", hours: 6, quantity: 4 },
+      { id: "washer", name: "Máy giặt", subtitle: "Giặt hằng ngày", icon: "local_laundry_service", hours: 1, quantity: 1 },
+      { id: "dryer", name: "Máy sấy", subtitle: "Sấy quần áo", icon: "dry", hours: 1, quantity: 0 },
+      { id: "stove", name: "Bếp điện", subtitle: "Nấu ăn", icon: "skillet", hours: 2, quantity: 1 },
+      { id: "microwave", name: "Lò vi sóng", subtitle: "Hâm nóng nhanh", icon: "microwave", hours: 1, quantity: 1 }
+    ];
+
+    const QUICK_RATES = [3500, 4000];
+    const DEFAULT_RATE = 4000;
+    const DEFAULT_MONTH = currentDate.getMonth() + 1;
+    const DEFAULT_YEAR = currentDate.getFullYear();
+
+    let selectedHousing = HOUSING_OPTIONS[0].value;
+    let selectedPresence = PRESENCE_OPTIONS[1].value;
+    let selectedMonth = DEFAULT_MONTH;
+    let selectedYear = DEFAULT_YEAR;
+    let deviceState = DEVICE_CATALOG.map((device) => ({ ...device }));
+
+    function setText(node, text) {
+      if (node) {
+        node.textContent = text;
+      }
+    }
+
+    function clamp(value, min, max, fallback) {
+      const parsed = Number(value);
+      if (Number.isNaN(parsed)) {
+        return fallback != null ? fallback : min;
+      }
+      return Math.max(min, Math.min(max, parsed));
+    }
+
+    function formatRate(value) {
+      return `${new Intl.NumberFormat("vi-VN").format(value)}đ / kWh`;
+    }
+
+    function getYearOptions() {
+      const years = new Set();
+      for (let year = DEFAULT_YEAR - 2; year <= DEFAULT_YEAR + 3; year += 1) {
+        years.add(year);
+      }
+      years.add(selectedYear);
+      return Array.from(years).sort((a, b) => a - b);
+    }
+
+    function getDraftSetup() {
+      try {
+        const raw = localStorage.getItem(LOCAL_DRAFT_KEY);
+        return raw ? JSON.parse(raw) : null;
+      } catch (error) {
+        return null;
+      }
+    }
+
+    function persistLocalHistory(setup) {
+      try {
+        const currentHistory = JSON.parse(localStorage.getItem(LOCAL_HISTORY_KEY) || "[]");
+        const filteredHistory = currentHistory.filter((entry) => !(Number(entry.month) === Number(setup.month) && Number(entry.year) === Number(setup.year)));
+        filteredHistory.unshift({
+          ...setup,
+          savedAt: new Date().toISOString()
+        });
+        filteredHistory.sort((a, b) => Number(b.year) - Number(a.year) || Number(b.month) - Number(a.month));
+        localStorage.setItem(LOCAL_HISTORY_KEY, JSON.stringify(filteredHistory.slice(0, 24)));
+      } catch (error) {
+        console.warn("Cannot persist local monthly history.", error);
+      }
+    }
+
+    function mergeDevices(savedDevices) {
+      const source = Array.isArray(savedDevices) ? savedDevices : [];
+      return DEVICE_CATALOG.map((device) => {
+        const saved = source.find((item) => item.id === device.id) || {};
+        return {
+          ...device,
+          name: saved.name || device.name,
+          subtitle: saved.subtitle || device.subtitle,
+          hours: clamp(saved.hours, 0, 24, device.hours),
+          quantity: clamp(saved.quantity, 0, 20, device.quantity)
+        };
+      });
+    }
+
+    function applyCopy() {
+      document.title = "PINKHOUSE - Thiết lập dữ liệu";
+      setText(document.querySelector("header .font-label-lg"), "Hủy");
+      setText(document.querySelector("main h1"), "Thiết lập dữ liệu");
+      setText(
+        document.querySelector("main h1 + p"),
+        "Cung cấp thông tin về không gian và thói quen sử dụng điện để nhận dự báo chính xác nhất."
+      );
+
+      const badges = document.querySelectorAll("section .absolute.top-0.left-0");
+      setText(badges[0], "BƯỚC 1");
+      setText(badges[1], "BƯỚC 2");
+      setText(badges[2], "BƯỚC 3");
+
+      const sectionOneLabels = sections[0].querySelectorAll("label");
+      setText(sections[0].querySelector("h2"), "Thông tin không gian sống");
+      setText(sections[0].querySelector("h2 + p"), "Chọn loại hình nhà ở phù hợp với bạn.");
+      setText(sectionOneLabels[0], "Loại hình nhà ở");
+      setText(sectionOneLabels[1], "Bạn có hay ở nhà không?");
+
+      setText(sections[1].querySelector("h2"), "Thiết bị tiêu thụ điện");
+      setText(sections[1].querySelector("h2 + p"), "Ước tính số giờ sử dụng trung bình mỗi ngày cho các thiết bị chính.");
+
+      setText(sections[2].querySelector("h2"), "Đơn giá điện năng");
+      setText(sections[2].querySelector("h2 + p"), "Nhập giá điện bạn đang phải trả để tính toán chi phí.");
+      setText(sections[2].querySelector("label"), "Giá tùy chỉnh");
+      rateInput.placeholder = "Nhập giá điện";
+
+      saveBtn.innerHTML = 'Hoàn tất thiết lập <span class="material-symbols-outlined text-lg">check_circle</span>';
+      backBtn.innerHTML = '<span class="material-symbols-outlined text-lg">arrow_back</span> Quay lại';
+
+      if (cancelBtn) {
+        cancelBtn.setAttribute("type", "button");
+      }
+      if (backBtn) {
+        backBtn.setAttribute("type", "button");
+      }
+      if (addDeviceButton) {
+        addDeviceButton.remove();
+      }
+    }
+
+    function renderHousingOptions() {
+      housingGrid.innerHTML = HOUSING_OPTIONS.map((option) => {
+        const active = option.value === selectedHousing;
+        return `
+          <button
+            type="button"
+            data-housing="${option.value}"
+            class="${active ? "border-2 border-primary bg-primary-fixed text-on-primary-fixed" : "border border-outline-variant bg-surface text-on-surface-variant hover:bg-surface-container-low"} rounded-lg p-sm flex flex-col items-center justify-center gap-base transition-colors h-24 ${option.wide ? "md:col-span-2" : ""}"
+          >
+            <span class="material-symbols-outlined text-3xl" ${active ? "style=\"font-variation-settings: 'FILL' 1;\"" : ""}>${option.icon}</span>
+            <span class="font-label-md text-label-md">${option.label}</span>
+          </button>
+        `;
+      }).join("");
+    }
+
+    function renderPresenceOptions() {
+      presenceRow.innerHTML = PRESENCE_OPTIONS.map((option) => {
+        const active = option.value === selectedPresence;
+        return `
+          <button
+            type="button"
+            data-presence="${option.value}"
+            class="flex-1 rounded-lg px-sm py-base flex items-center justify-center gap-base transition-colors ${active ? "border border-primary bg-primary-fixed text-on-primary-fixed" : "border border-outline-variant bg-surface text-on-surface-variant hover:bg-surface-container-low"}"
+          >
+            <span class="material-symbols-outlined ${active ? "text-primary" : "text-on-surface-variant"}" ${active ? "style=\"font-variation-settings: 'FILL' 1;\"" : ""}>${option.icon}</span>
+            <span class="font-label-md text-label-md">${option.label}</span>
+          </button>
+        `;
+      }).join("");
+    }
+
+    function renderScheduleSelectors() {
+      if (!scheduleFieldHost.parentElement && presenceRow.parentElement) {
+        presenceRow.parentElement.appendChild(scheduleFieldHost);
+      }
+
+      scheduleFieldHost.className = "grid grid-cols-1 md:grid-cols-2 gap-sm pt-xs";
+      scheduleFieldHost.innerHTML = `
+        <div class="flex flex-col gap-xs">
+          <label for="billingMonthSelect" class="font-label-md text-label-md text-on-surface">Tháng dự đoán</label>
+          <div class="relative">
+            <select id="billingMonthSelect" class="w-full appearance-none bg-surface-container-low border border-transparent focus:border-primary focus:bg-surface rounded-lg py-[10px] px-sm font-body-md text-body-md text-on-surface outline-none transition-all">
+              ${Array.from({ length: 12 }, (_, index) => index + 1).map((month) => `
+                <option value="${month}" ${month === selectedMonth ? "selected" : ""}>Tháng ${month}</option>
+              `).join("")}
+            </select>
+            <span class="material-symbols-outlined absolute right-sm top-1/2 -translate-y-1/2 text-on-surface-variant pointer-events-none">expand_more</span>
+          </div>
+        </div>
+        <div class="flex flex-col gap-xs">
+          <label for="billingYearSelect" class="font-label-md text-label-md text-on-surface">Năm dự đoán</label>
+          <div class="relative">
+            <select id="billingYearSelect" class="w-full appearance-none bg-surface-container-low border border-transparent focus:border-primary focus:bg-surface rounded-lg py-[10px] px-sm font-body-md text-body-md text-on-surface outline-none transition-all">
+              ${getYearOptions().map((year) => `
+                <option value="${year}" ${year === selectedYear ? "selected" : ""}>${year}</option>
+              `).join("")}
+            </select>
+            <span class="material-symbols-outlined absolute right-sm top-1/2 -translate-y-1/2 text-on-surface-variant pointer-events-none">expand_more</span>
+          </div>
+        </div>
+      `;
+    }
+
+    function renderRateChips() {
+      const currentRate = clamp(rateInput.value || DEFAULT_RATE, 1000, 100000, DEFAULT_RATE);
+      rateChipRow.innerHTML = `
+        <span class="bg-secondary-container text-on-secondary-container px-sm py-xs rounded-full font-label-sm text-label-sm">
+          Giá nhà nước (Bậc thang)
+        </span>
+        ${QUICK_RATES.map((rate) => `
+          <button
+            type="button"
+            data-rate="${rate}"
+            class="px-sm py-xs rounded-full font-label-sm text-label-sm border transition-colors ${currentRate === rate ? "bg-primary-fixed text-on-primary-fixed border-primary" : "bg-surface-container-high text-on-surface-variant border-outline-variant hover:bg-surface-variant"}"
+          >
+            ${formatRate(rate)}
+          </button>
+        `).join("")}
+      `;
+    }
+
+    function renderCounter(index, field, value, label, max) {
+      return `
+        <div class="flex items-center gap-xs">
+          <span class="font-label-sm text-label-sm text-on-surface-variant min-w-[74px] text-right">${label}</span>
+          <div class="flex items-center bg-surface-container-low rounded-lg border border-transparent focus-within:border-primary transition-colors">
+            <button type="button" data-index="${index}" data-field="${field}" data-action="minus" class="w-8 h-8 flex items-center justify-center text-on-surface-variant hover:text-primary transition-colors">
+              <span class="material-symbols-outlined text-sm">remove</span>
+            </button>
+            <input
+              type="text"
+              value="${value}"
+              data-index="${index}"
+              data-field="${field}"
+              data-max="${max}"
+              class="w-10 text-center bg-transparent border-none font-label-lg text-label-lg text-on-surface focus:ring-0 p-0 h-8"
+            />
+            <button type="button" data-index="${index}" data-field="${field}" data-action="plus" class="w-8 h-8 flex items-center justify-center text-on-surface-variant hover:text-primary transition-colors">
+              <span class="material-symbols-outlined text-sm">add</span>
+            </button>
+          </div>
+        </div>
+      `;
+    }
+
+    function renderDeviceRows() {
+      deviceList.innerHTML = deviceState.map((device, index) => `
+        <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-sm p-sm ${index < deviceState.length - 1 ? "border-b border-surface-container-high" : ""} hover:bg-surface-container-low transition-colors">
+          <div class="flex items-center gap-sm">
+            <div class="w-10 h-10 rounded-full ${index % 2 === 0 ? "bg-secondary-container text-on-secondary-container" : "bg-surface-container-high text-on-surface-variant"} flex items-center justify-center">
+              <span class="material-symbols-outlined">${device.icon}</span>
+            </div>
+            <div class="flex flex-col">
+              <span class="font-label-lg text-label-lg text-on-surface">${device.name}</span>
+              <span class="font-label-sm text-label-sm text-on-surface-variant">${device.subtitle}</span>
+            </div>
+          </div>
+          <div class="flex flex-col sm:flex-row sm:items-center gap-sm md:gap-md md:justify-end">
+            ${renderCounter(index, "quantity", device.quantity, "Số lượng", 20)}
+            ${renderCounter(index, "hours", device.hours, "Giờ/ngày", 24)}
+          </div>
+        </div>
+      `).join("");
+    }
+
+    function renderAll() {
+      renderHousingOptions();
+      renderPresenceOptions();
+      renderScheduleSelectors();
+      renderRateChips();
+      renderDeviceRows();
+    }
+
+    function normalizeRateInput() {
+      const digits = String(rateInput.value || "").replace(/[^0-9]/g, "");
+      rateInput.value = digits === "" ? String(DEFAULT_RATE) : String(clamp(digits, 1000, 100000, DEFAULT_RATE));
+      renderRateChips();
+    }
+
+    function parseSetupFromUI() {
+      return {
+        month: selectedMonth,
+        year: selectedYear,
+        housingType: selectedHousing,
+        presence: selectedPresence,
+        rate: clamp(rateInput.value || DEFAULT_RATE, 1000, 100000, DEFAULT_RATE),
+        devices: deviceState.map((device) => ({
+          id: device.id,
+          name: device.name,
+          hours: clamp(device.hours, 0, 24, device.hours),
+          quantity: clamp(device.quantity, 0, 20, device.quantity)
+        }))
+      };
+    }
+
+    async function loadSetup() {
+      let setup = null;
+
+      try {
+        const res = await fetch(`${BACKEND_URL}/api/setup`);
+        if (!res.ok) {
+          throw new Error(`Setup request failed: ${res.status}`);
+        }
+        setup = await res.json();
+      } catch (error) {
+        setup = getDraftSetup();
+      }
+
+      if (setup) {
+        selectedHousing = HOUSING_OPTIONS.some((option) => option.value === setup.housingType)
+          ? setup.housingType
+          : HOUSING_OPTIONS[0].value;
+        selectedPresence = PRESENCE_OPTIONS.some((option) => option.value === setup.presence)
+          ? setup.presence
+          : PRESENCE_OPTIONS[1].value;
+        selectedMonth = clamp(setup.month, 1, 12, DEFAULT_MONTH);
+        selectedYear = clamp(setup.year, DEFAULT_YEAR - 10, DEFAULT_YEAR + 10, DEFAULT_YEAR);
+        rateInput.value = String(clamp(setup.rate, 1000, 100000, DEFAULT_RATE));
+        deviceState = mergeDevices(setup.devices);
+      } else {
+        rateInput.value = String(DEFAULT_RATE);
+      }
+
+      renderAll();
+    }
+
+    async function saveSetup() {
+      const payload = parseSetupFromUI();
+      saveBtn.disabled = true;
+      saveBtn.classList.add("opacity-70", "pointer-events-none");
+
+      localStorage.setItem(LOCAL_DRAFT_KEY, JSON.stringify(payload));
+      persistLocalHistory(payload);
+
+      try {
+        await fetch(`${BACKEND_URL}/api/setup`, {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(payload)
+        });
+      } catch (error) {
+        console.warn("Backend not reachable, continue with local data.", error);
+      } finally {
+        window.location.href = window.PinkhouseAuth
+          ? window.PinkhouseAuth.routes.dashboard
+          : encodeURI("/dashboard 1/code.html");
+      }
+    }
+
+    housingGrid.addEventListener("click", (event) => {
+      const button = event.target.closest("[data-housing]");
+      if (!button) {
+        return;
+      }
+      selectedHousing = button.getAttribute("data-housing") || selectedHousing;
+      renderHousingOptions();
+    });
+
+    presenceRow.addEventListener("click", (event) => {
+      const button = event.target.closest("[data-presence]");
+      if (!button) {
+        return;
+      }
+      selectedPresence = button.getAttribute("data-presence") || selectedPresence;
+      renderPresenceOptions();
+    });
+
+    scheduleFieldHost.addEventListener("change", (event) => {
+      if (event.target.id === "billingMonthSelect") {
+        selectedMonth = clamp(event.target.value, 1, 12, DEFAULT_MONTH);
+      }
+      if (event.target.id === "billingYearSelect") {
+        selectedYear = clamp(event.target.value, DEFAULT_YEAR - 10, DEFAULT_YEAR + 10, DEFAULT_YEAR);
+        renderScheduleSelectors();
+      }
+    });
+
+    rateChipRow.addEventListener("click", (event) => {
+      const button = event.target.closest("[data-rate]");
+      if (!button) {
+        return;
+      }
+      rateInput.value = button.getAttribute("data-rate") || String(DEFAULT_RATE);
+      renderRateChips();
+    });
+
+    deviceList.addEventListener("click", (event) => {
+      const button = event.target.closest("[data-action]");
+      if (!button) {
+        return;
+      }
+
+      const index = Number(button.getAttribute("data-index"));
+      const field = button.getAttribute("data-field");
+      const action = button.getAttribute("data-action");
+      const max = field === "quantity" ? 20 : 24;
+      const delta = action === "plus" ? 1 : -1;
+
+      if (!deviceState[index] || !field) {
+        return;
+      }
+
+      deviceState[index][field] = clamp(Number(deviceState[index][field] || 0) + delta, 0, max, 0);
+      renderDeviceRows();
+    });
+
+    deviceList.addEventListener("input", (event) => {
+      const input = event.target.closest("input[data-field]");
+      if (!input) {
+        return;
+      }
+
+      const index = Number(input.getAttribute("data-index"));
+      const field = input.getAttribute("data-field");
+      const max = Number(input.getAttribute("data-max") || 24);
+      if (!deviceState[index] || !field) {
+        return;
+      }
+
+      const digits = String(input.value || "").replace(/[^0-9]/g, "");
+      deviceState[index][field] = digits === "" ? 0 : clamp(digits, 0, max, 0);
+      input.value = String(deviceState[index][field]);
+    });
+
+    deviceList.addEventListener("blur", (event) => {
+      const input = event.target.closest("input[data-field]");
+      if (!input) {
+        return;
+      }
+
+      const index = Number(input.getAttribute("data-index"));
+      const field = input.getAttribute("data-field");
+      const max = Number(input.getAttribute("data-max") || 24);
+      if (!deviceState[index] || !field) {
+        return;
+      }
+
+      deviceState[index][field] = clamp(deviceState[index][field], 0, max, 0);
+      input.value = String(deviceState[index][field]);
+    }, true);
+
+    rateInput.addEventListener("input", () => {
+      rateInput.value = String(rateInput.value || "").replace(/[^0-9]/g, "");
+      renderRateChips();
+    });
+
+    rateInput.addEventListener("blur", normalizeRateInput);
+
+    cancelBtn.addEventListener("click", () => {
+      window.location.href = window.PinkhouseAuth
+        ? window.PinkhouseAuth.routes.home
+        : encodeURI("/trang chủ pinkhouse/code.html");
+    });
+
+    backBtn.addEventListener("click", () => {
+      window.location.href = window.PinkhouseAuth
+        ? window.PinkhouseAuth.routes.home
+        : encodeURI("/trang chủ pinkhouse/code.html");
+    });
+
+    saveBtn.addEventListener("click", saveSetup);
+
+    applyCopy();
+    renderAll();
+    loadSetup();
+  })();
+</script>
+  <script src="../_auth.js"></script>  
+  <script src="../_nav.js"></script>  
+  <script src="../_ui_exact_vi.js?v=20260506g"></script>
+  <script src="/_setup_extra.js"></script>
+</body>
+</html>
+
+
